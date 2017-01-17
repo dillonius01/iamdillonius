@@ -1,0 +1,32 @@
+#btn-language {
+	height: 5em;
+	width: 5em;
+	border-radius: 5em;
+	background: cornflowerblue;
+	border: none;
+	cursor: pointer;
+	outline: 0;
+	font-size: 1em;
+	position: fixed;
+}
+
+#btn-language-container {
+	height: 5em;
+	width: 5em;
+	margin: 1em 1em 0em 0em;
+	float: right;
+}
+
+.center-horiz {
+	display: flex;
+	justify-content: center;
+}
+
+.center-vert {
+	display: flex;
+	align-items: center;
+}
+
+.big {
+	height: 2000px;
+}

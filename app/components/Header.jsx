@@ -15,9 +15,15 @@ class Header extends Component {
 
     return (
       <div>
-        <h2>Dillon Powers</h2>
-        <p>CURRENT LANGUAGE: { language }</p>
-        <button onClick={handleToggle}>{ (language === 'English') ? '汉语' : 'English' }</button>
+        <div id="btn-language-container">
+          <button id="btn-language" onClick={handleToggle}>{ (language === 'English') ? '汉语' : 'English' }</button>
+        </div>
+        <div className="center-horiz">
+          <h1>{ (language === 'English') ? 'Dillon Powers' : '彭郎' }</h1>
+        </div>
+        <div className="big">
+          <p>paragraph that takes up a bunch of space</p>
+        </div>
       </div>
     );
   }
