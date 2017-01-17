@@ -1,15 +1,14 @@
 import React from 'react';
-import { Router, Route, browserHistory, IndexRedirect } from 'react-router';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
-import App from './components/App'
-import Home from './components/Home'
+import App from './components/App';
+import Header from './components/Header';
 
 
 export default () => (
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <IndexRedirect to="/home" />
-      <Route path="/home" component={Home} />
+      <IndexRoute component={Header} />
     </Route>
   </Router>
 );

@@ -1,13 +1,13 @@
 {
-  "name": "react-template",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "Sets up a Node server, React, Redux, and a Router",
+  "description": "Personal site for dillonius",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack -w & nodemon server.js"
   },
-  "author": "shane",
+  "author": "dillonius01",
   "license": "ISC",
   "dependencies": {
     "babel": "^6.5.2",
