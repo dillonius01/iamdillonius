@@ -1,8 +1,14 @@
+body {
+	font-family: 'Raleway', STFangsong, 华文仿宋, FangSong, 仿宋, sans-serif;
+	margin: 0;
+}
+
 #btn-language {
 	height: 5em;
 	width: 5em;
 	border-radius: 5em;
-	background: cornflowerblue;
+	background: black;
+	color: white;
 	border: none;
 	cursor: pointer;
 	outline: 0;
@@ -14,7 +20,12 @@
 	height: 5em;
 	width: 5em;
 	margin: 1em 1em 0em 0em;
-	float: right;
+	right: 0;
+	position: absolute;
+}
+
+button {
+	z-index: 1;
 }
 
 .center-horiz {
@@ -27,6 +38,40 @@
 	align-items: center;
 }
 
+video {
+	width: 100%;
+	height: auto;
+	z-index: -1;
+}
+
+.video-container {
+	position: static;
+}
+
 .big {
 	height: 2000px;
+}
+
+#name-container {
+	width: 100%;
+	height: calc(56vw);
+	display: flex;
+	align-items: center;
+	top: 0;
+	background: none;
+	position: absolute;
+	font-size: 3em;
+	text-align: center;
+}
+
+#top-container {
+	display: flex;
+	align-items: center;
+}
+
+h1 {
+	margin: 0;
+	color: white;
+	background: black;
+	width: 100%;
 }
