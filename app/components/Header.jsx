@@ -48,7 +48,7 @@ class Header extends Component {
           <div id="video-overlay" className="center-horiz">
             <div id="title-container">
               <h1>{ (language === 'English') ? 'Dillon Powers' : '彭郎' }</h1>
-              <p>{this.state[language][this.state.pointer]}</p>
+              <h3>{this.state[language][this.state.pointer]}</h3>
             </div>
           </div>
           <div id="video-container">
@@ -58,7 +58,7 @@ class Header extends Component {
           </div>
         </div>
         <div className="big">
-          <h3>paragraph that takes up a bunch of space</h3>
+          <p>paragraph that takes up a bunch of space</p>
         </div>
       </div>
     );
