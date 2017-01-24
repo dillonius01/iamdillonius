@@ -22,7 +22,7 @@ class Header extends Component {
         clearInterval(prevState.interval);
         return { interval: null };
       }
-      let interval = setInterval(this.changePointer, 2000);
+      let interval = setInterval(this.changePointer, 4000);
       return { interval };
     })
   }
@@ -48,7 +48,7 @@ class Header extends Component {
           <div id="video-overlay" className="center-horiz">
             <div id="title-container">
               <h1>{ (language === 'English') ? 'Dillon Powers' : '彭郎' }</h1>
-              <h3>{this.state[language][this.state.pointer]}</h3>
+              <h3 className="header-adj">{this.state[language][this.state.pointer]}</h3>
             </div>
           </div>
           <div id="video-container">

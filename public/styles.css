@@ -3,6 +3,31 @@ body {
 	margin: 0;
 }
 
+@media (max-width: 950px) {
+	body {
+		font-size: 8pt;
+	}
+}
+
+@media (max-width: 750px) {
+	body {
+		font-size: 5pt;
+	}
+}
+
+@keyframes fade {
+	0% { color: black;  }
+	20% { color: white; }
+	80% { color: white; }
+	100% { color: black; }
+}
+
+.header-adj {
+	animation-name: fade;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
 #btn-language {
 	height: 5em;
 	width: 5em;
