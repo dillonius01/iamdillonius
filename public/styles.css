@@ -25,7 +25,6 @@ body {
 .header-adj {
 	animation-name: fade;
 	animation-duration: 4s;
-	animation-iteration-count: infinite;
 }
 
 .info-card {
