@@ -3,17 +3,23 @@ import { connect } from 'react-redux';
 import { toggleLanguage } from '../ducks/language';
 
 
+/* -----------------    PRESENTATIONAL COMPONENT     ------------------ */
+
+
 class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      English: ['developer', 'runner', 'linguist'],
-      Mandarin: ['黑客', '跑步爱好者', '语言学家'],
+      English: ['developer', 'runner', 'linguist', 'cellist', 'historian', 'singer'],
+      Mandarin: ['黑客', '跑步爱好者', '语言学家', '大提琴手', '历史学家', '歌手'],
       pointer: 0,
-      interval: null
+      interval: null,
+      playing: true
     };
 
     this.changePointer = this.changePointer.bind(this);
+    this.togglePlay = this.togglePlay.bind(this);
+
   }
 
   componentWillMount() {
@@ -24,7 +30,7 @@ class Header extends Component {
       }
       let interval = setInterval(this.changePointer, 4000);
       return { interval };
-    })
+    });
   }
 
   changePointer() {
@@ -33,11 +39,24 @@ class Header extends Component {
       let plusOne = prevState.pointer + 1;
       let pointer = (plusOne > adjLen) ? 0 : plusOne;
       return { pointer };
-    })
+    });
+  }
+
+  togglePlay() {
+    // seems weird for React but this is a very limited DOM manipulation
+    let video = document.getElementById('wheel-vid');
+    if (this.state.playing) {
+      video.pause();
+      this.setState({playing: false});
+    } else {
+      video.play();
+      this.setState({playing: true});
+    }
   }
 
   render() {
     const { language, handleToggle } = this.props;
+    const { playing } = this.state;
 
     return (
       <div>
@@ -55,15 +74,16 @@ class Header extends Component {
             <video playsInline autoPlay muted loop id="wheel-vid">
               <source src="public/media/nara-wheel.mp4" />
             </video>
+            <button onClick={this.togglePlay}>{ playing ? 'Pause' : 'Play' }</button>
           </div>
-        </div>
-        <div className="big">
-          <p>paragraph that takes up a bunch of space</p>
         </div>
       </div>
     );
   }
 }
+
+/* -----------------    REDUX CONTAINER     ------------------ */
+
 
 const mapStateToProps = ({ language }) => ({ language });
 

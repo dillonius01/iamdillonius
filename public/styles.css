@@ -28,17 +28,27 @@ body {
 	animation-iteration-count: infinite;
 }
 
+.info-card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 #btn-language {
 	height: 5em;
 	width: 5em;
 	border-radius: 5em;
-	background: black;
+	background: rgba(150,0,0,0.8);
 	color: white;
 	border: none;
 	cursor: pointer;
 	outline: 0;
 	font-size: 1em;
 	position: fixed;
+}
+
+#btn-language:hover {
+	background: rgba(0,0,120,0.8);
 }
 
 #btn-language-container {
