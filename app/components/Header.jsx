@@ -38,6 +38,7 @@ class Header extends Component {
 
   render() {
     const { language, handleToggle } = this.props;
+    const { pointer } = this.state;
 
     return (
       <div>
@@ -48,7 +49,7 @@ class Header extends Component {
           <div id="video-overlay" className="center-horiz">
             <div id="title-container">
               <h1>{ (language === 'English') ? 'Dillon Powers' : '彭郎' }</h1>
-              <h3 className="header-adj">{this.state[language][this.state.pointer]}</h3>
+              <h3 key={pointer} className="header-adj">{this.state[language][this.state.pointer]}</h3>
             </div>
           </div>
           <div id="video-container">
