@@ -22,10 +22,18 @@ body {
 	100% { color: black; }
 }
 
-.header-adj {
-	animation-name: fade;
-	animation-duration: 4s;
+@keyframes pulse {
+	0%, 100% { transform: scale(1); }
+	50% { transform: scale(1.5); }
 }
+
+.header-adj {
+	animation: fade 4s;
+}
+
+/*.pulse {
+	animation: pulse 1s;
+}*/
 
 .info-card {
 	display: flex;
@@ -44,10 +52,12 @@ body {
 	outline: 0;
 	font-size: 1em;
 	position: fixed;
+	transition: background 0.5s;
 }
 
 #btn-language:hover {
 	background: rgba(0,0,120,0.8);
+	transition: background 0.5s
 }
 
 #btn-language-container {
@@ -70,6 +80,14 @@ button {
 .center-vert {
 	display: flex;
 	align-items: center;
+}
+
+#play-pause {
+	color: white;
+}
+
+#play-pause-container {
+	margin-top: 30px;
 }
 
 video {
@@ -107,5 +125,9 @@ h1, h3 {
 	margin: 0;
 	color: white;
 	background: black;
+	width: 100%;
+}
+ 
+#pause-container {
 	width: 100%;
 }

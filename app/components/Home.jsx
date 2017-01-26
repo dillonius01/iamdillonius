@@ -23,8 +23,8 @@ class Home extends Component {
 					<SparkScroll.div
 						className="info-card"
 					  timeline={{
-					    100: { marginLeft: '-500px', opacity: 0 },
-					    250: { marginLeft: '0px', opacity: 1, ease: 'bouncePast' }
+					    250: { marginLeft: '-1000px', opacity: 0 },
+					    450: { marginLeft: '0px', opacity: 1, ease: 'bouncePast' }
 					  }}
 					 >
 					  <h2>{(language === 'English') ? 'Some Content!' : '有些内容'}</h2>
