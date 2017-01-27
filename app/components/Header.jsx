@@ -21,6 +21,7 @@ class Header extends Component {
     this.changePointer = this.changePointer.bind(this);
     this.togglePlay = this.togglePlay.bind(this);
     this.onLanguageClick = this.onLanguageClick.bind(this);
+    this.animationDone = this.animationDone.bind(this);
 
   }
 
@@ -33,6 +34,14 @@ class Header extends Component {
       let interval = setInterval(this.changePointer, 4000);
       return { interval };
     });
+  }
+
+  componentDidMount() {
+    this.langBtn.addEventListener('animationend', this.animationDone);
+  }
+
+  componentWillUnmount() {
+    this.langBtn.removeEventListener('animationend', this.animationDone);
   }
 
   changePointer() {
@@ -55,10 +64,13 @@ class Header extends Component {
     }
   }
 
+  animationDone() {
+    this.setState({pulse: false}); // resets class name so can re-animate
+  }
+
   onLanguageClick() {
     const { toggle_language } = this.props;
-    this.setState({pulse: true}); // NEED TO SET BACK TO FALSE onanimationend
-    console.log('this.state.pulse is', this.state.pulse)
+    this.setState({pulse: true}); // toggles class name so animation runs
     toggle_language();
   }
 
@@ -69,7 +81,14 @@ class Header extends Component {
     return (
       <div>
         <div id="btn-language-container">
-          <button id="btn-language" onClick={this.onLanguageClick}>{ (language === 'English') ? '汉语' : 'English' }</button>
+          <button
+            id="btn-language"
+            onClick={this.onLanguageClick}
+            className={pulse ? 'pulse' : ''}
+            ref={ langBtn => this.langBtn = langBtn }
+          >
+            { (language === 'English') ? '汉语' : 'English' }
+          </button>
         </div>
         <div id="top-container">
           <div id="video-overlay" className="center-horiz">
@@ -77,7 +96,7 @@ class Header extends Component {
               <h1>{ (language === 'English') ? 'Dillon Powers' : '彭郎' }</h1>
               <h3 key={pointer} className="header-adj">{this.state[language][this.state.pointer]}</h3>
               <div id="play-pause-container">
-                <span className={pulse ? 'pulse' : ''} id="play-pause">{ playing ? 'Pause' : 'Play' }</span>
+                <span id="play-pause">{ playing ? 'Pause' : 'Play' }</span>
               </div>
             </div>
           </div>

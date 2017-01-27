@@ -22,18 +22,18 @@ body {
 	100% { color: black; }
 }
 
-@keyframes pulse {
+@keyframes pulseOnce {
 	0%, 100% { transform: scale(1); }
-	50% { transform: scale(1.5); }
+	50% { transform: scale(1.2); }
 }
 
 .header-adj {
 	animation: fade 4s;
 }
 
-/*.pulse {
-	animation: pulse 1s;
-}*/
+.pulse {
+	animation: pulseOnce 0.5s;
+}
 
 .info-card {
 	display: flex;
