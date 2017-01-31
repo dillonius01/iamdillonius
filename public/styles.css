@@ -13,10 +13,10 @@
 }
 
 @keyframes fade {
-	0% { color: black;  }
+	0% { color: rgba(0,0,0,0);  }
 	20% { color: white; }
 	80% { color: white; }
-	100% { color: black; }
+	100% { color: rgba(0,0,0,0); }
 }
 
 @keyframes pulseOnce {
@@ -34,12 +34,6 @@ button {
 	z-index: 1;
 }
 
-h1, h3 {
-	margin: 0;
-	color: white;
-	background: black;
-	width: 100%;
-}
 
 /* CLASSES */
 .header-adj {
@@ -47,6 +41,12 @@ h1, h3 {
 	-webkit-animation: fade 4s;
 	-moz-animation: fade 4s;
 	-o-animation: fade 4s;
+}
+
+.header-txt {
+	margin: 0;
+	color: white;
+	width: 100%;
 }
 
 .pulse {
@@ -127,18 +127,28 @@ h1, h3 {
 	background-image: url("media/yangshuo.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	transition: all 6s ease;
-	-webkit-transition: all 6s ease;
-	-moz-transition: all 6s ease;
-	-o-transition: all 6s ease;
-	-ms-transition: all 6s ease;
+	transition: all 15s ease;
+	-webkit-transition: all 15s ease;
+	-moz-transition: all 15s ease;
+	-o-transition: all 15s ease;
+	-ms-transition: all 15s ease;
 }
 
 #pic-overlay:hover {
-	transform: scale(1.1);
+	transform: scale(1.05);
 }
 
 #title-container {
 	width: 100%;
+	background-image: 
+	linear-gradient(
+		to right,
+		rgba(0,0,0,0),
+		rgba(0,0,0,1) 25%,
+		rgba(0,0,0,1) 75%,
+		rgba(0,0,0,0)
+	);
+	padding: 0.15em;
+
 }
  
