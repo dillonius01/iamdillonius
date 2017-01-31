@@ -3,17 +3,26 @@ import { connect } from 'react-redux';
 import { toggleLanguage } from '../ducks/language';
 
 
+/* -----------------    PRESENTATIONAL COMPONENT     ------------------ */
+
+
 class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      English: ['developer', 'runner', 'linguist'],
-      Mandarin: ['黑客', '跑步爱好者', '语言学家'],
+      English: ['developer', 'runner', 'linguist', 'cellist', 'historian', 'singer'],
+      Mandarin: ['黑客', '跑步爱好者', '语言学家', '大提琴手', '历史学家', '歌手'],
       pointer: 0,
-      interval: null
+      interval: null,
+      playing: true,
+      pulse: false
     };
 
     this.changePointer = this.changePointer.bind(this);
+    this.togglePlay = this.togglePlay.bind(this);
+    this.onLanguageClick = this.onLanguageClick.bind(this);
+    this.animationDone = this.animationDone.bind(this);
+
   }
 
   componentWillMount() {
@@ -24,7 +33,15 @@ class Header extends Component {
       }
       let interval = setInterval(this.changePointer, 4000);
       return { interval };
-    })
+    });
+  }
+
+  componentDidMount() {
+    this.langBtn.addEventListener('animationend', this.animationDone);
+  }
+
+  componentWillUnmount() {
+    this.langBtn.removeEventListener('animationend', this.animationDone);
   }
 
   changePointer() {
@@ -33,43 +50,75 @@ class Header extends Component {
       let plusOne = prevState.pointer + 1;
       let pointer = (plusOne > adjLen) ? 0 : plusOne;
       return { pointer };
-    })
+    });
+  }
+
+  togglePlay(evt) {
+    const video = evt.target;
+    if (this.state.playing) {
+      video.pause();
+      this.setState({playing: false});
+    } else {
+      video.play();
+      this.setState({playing: true});
+    }
+  }
+
+  animationDone() {
+    this.setState({pulse: false}); // resets class name so can re-animate
+  }
+
+  onLanguageClick() {
+    const { toggle_language } = this.props;
+    this.setState({pulse: true}); // toggles class name so animation runs
+    toggle_language();
   }
 
   render() {
-    const { language, handleToggle } = this.props;
-    const { pointer } = this.state;
+    const { language } = this.props;
+    const { playing, pointer, pulse } = this.state;
 
     return (
       <div>
         <div id="btn-language-container">
-          <button id="btn-language" onClick={handleToggle}>{ (language === 'English') ? '汉语' : 'English' }</button>
+          <button
+            id="btn-language"
+            onClick={this.onLanguageClick}
+            className={pulse ? 'pulse' : ''}
+            ref={ langBtn => this.langBtn = langBtn }
+          >
+            { (language === 'English') ? '汉语' : 'English' }
+          </button>
         </div>
         <div id="top-container">
           <div id="video-overlay" className="center-horiz">
             <div id="title-container">
               <h1>{ (language === 'English') ? 'Dillon Powers' : '彭郎' }</h1>
               <h3 key={pointer} className="header-adj">{this.state[language][this.state.pointer]}</h3>
+              <div id="play-pause-container">
+                <span id="play-pause">{ playing ? 'Pause' : 'Play' }</span>
+              </div>
             </div>
           </div>
           <div id="video-container">
-            <video playsInline autoPlay muted loop id="wheel-vid">
+            <video onClick={this.togglePlay} playsInline autoPlay muted loop id="wheel-vid">
               <source src="public/media/nara-wheel.mp4" />
             </video>
           </div>
-        </div>
-        <div className="big">
-          <p>paragraph that takes up a bunch of space</p>
         </div>
       </div>
     );
   }
 }
 
+
+/* -----------------    REDUX CONTAINER     ------------------ */
+
+
 const mapStateToProps = ({ language }) => ({ language });
 
 const mapDispatchToProps = dispatch => ({
-  handleToggle: () => dispatch(toggleLanguage())
+  toggle_language: () => dispatch(toggleLanguage())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
