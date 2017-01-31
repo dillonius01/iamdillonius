@@ -21,7 +21,6 @@ class Header extends Component {
     this.changePointer = this.changePointer.bind(this);
     this.onLanguageClick = this.onLanguageClick.bind(this);
     this.animationDone = this.animationDone.bind(this);
-    this.toggleImgZoom = this.toggleImgZoom.bind(this);
 
   }
 
@@ -64,11 +63,6 @@ class Header extends Component {
     toggle_language();
   }
 
-  toggleImgZoom(evt) {
-    // TODO: adjust when child nodes firing
-    this.setState(prevState => ({ zoom: !prevState.zoom}));
-  }
-
   render() {
     const { language } = this.props;
     const { pointer, pulse } = this.state;
@@ -86,13 +80,10 @@ class Header extends Component {
           </button>
         </div>
           <div id="pic-overlay"
-               className="center-horiz"
-               onMouseOver={this.toggleImgZoom}
-               onMouseOut={this.toggleImgZoom}
-          >
+               className="center-horiz">
             <div id="title-container">
-              <h1 id="h1name">{ (language === 'English') ? 'Dillon Powers' : '彭郎' }</h1>
-              <h3 id="h3adj" key={pointer} className="header-adj">{this.state[language][this.state.pointer]}</h3>
+              <h1>{ (language === 'English') ? 'Dillon Powers' : '彭郎' }</h1>
+              <h3 key={pointer} className="header-adj">{this.state[language][this.state.pointer]}</h3>
             </div>
           </div>
       </div>
