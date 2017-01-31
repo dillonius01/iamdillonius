@@ -1,8 +1,4 @@
-body {
-	font-family: 'Raleway', STFangsong, 华文仿宋, FangSong, 仿宋, sans-serif;
-	margin: 0;
-}
-
+/* MEDIA QUERIES AND ANIMATIONS */
 @media (max-width: 950px) {
 	body {
 		font-size: 8pt;
@@ -27,6 +23,24 @@ body {
 	50% { transform: scale(1.2); }
 }
 
+/* TAGS */
+body {
+	font-family: 'Raleway', STFangsong, 华文仿宋, FangSong, 仿宋, sans-serif;
+	margin: 0;
+}
+
+button {
+	z-index: 1;
+}
+
+h1, h3 {
+	margin: 0;
+	color: white;
+	background: black;
+	width: 100%;
+}
+
+/* CLASSES */
 .header-adj {
 	animation: fade 4s;
 }
@@ -41,6 +55,22 @@ body {
 	justify-content: center;
 }
 
+.center-horiz {
+	display: flex;
+	justify-content: center;
+}
+
+.center-vert {
+	display: flex;
+	align-items: center;
+}
+
+
+.big {
+	height: 2000px;
+}
+
+/* IDS */
 #btn-language {
 	height: 5em;
 	width: 5em;
@@ -68,66 +98,22 @@ body {
 	position: absolute;
 }
 
-button {
-	z-index: 1;
-}
-
-.center-horiz {
-	display: flex;
-	justify-content: center;
-}
-
-.center-vert {
-	display: flex;
-	align-items: center;
-}
-
-#play-pause {
-	color: white;
-}
-
-#play-pause-container {
-	margin-top: 30px;
-}
-
-video {
-	width: 100%;
-	height: auto;
-	z-index: -1;
-}
-
-.big {
-	height: 2000px;
-}
-
-#video-overlay {
+#pic-overlay {
 	width: 100%;
 	height: calc(56vw);
 	display: flex;
 	align-items: center;
 	top: 0;
 	background: none;
-	position: absolute;
 	font-size: 2.5em;
 	text-align: center;
+
+	background-image: url("media/yangshuo.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #title-container {
 	width: 100%;
 }
-
-#top-container {
-	display: flex;
-	align-items: center;
-}
-
-h1, h3 {
-	margin: 0;
-	color: white;
-	background: black;
-	width: 100%;
-}
  
-#pause-container {
-	width: 100%;
-}
