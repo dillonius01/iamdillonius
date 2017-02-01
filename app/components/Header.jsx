@@ -79,12 +79,12 @@ class Header extends Component {
             { (language === 'English') ? '汉语' : 'English' }
           </button>
         </div>
-          <div id="pic-overlay"
-               className="center-horiz">
-            <div id="title-container">
-              <div id="grad-left"></div>
-              <h1 className="header-txt">{ (language === 'English') ? 'Dillon Powers' : '彭郎' }</h1>
-              <h3 key={pointer} className="header-txt header-adj">{this.state[language][this.state.pointer]}</h3>
+          <div id="pic-parent">
+            <div id="pic-child" className="center-horiz">
+              <div id="title-container">
+                <h1 className="header-txt">{ (language === 'English') ? 'Dillon Powers' : '彭郎' }</h1>
+                <h3 key={pointer} className="header-txt header-adj">{this.state[language][this.state.pointer]}</h3>
+              </div>
             </div>
           </div>
       </div>
