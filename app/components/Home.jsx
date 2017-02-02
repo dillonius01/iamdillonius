@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { SparkScroll, SparkProxy } from './AppSpark';
 
 import Header from './Header';
+import Intro from './Intro';
 
 
 /* -----------------    PRESENTATIONAL COMPONENT     ------------------ */
@@ -18,7 +19,6 @@ class Home extends Component {
 		return(
 			<div>
 				<Header />
-				<div>{(language === 'English') ? 'Hello, World!' : '世界，你好！'}</div>
 				<SparkProxy.div>
 					<SparkScroll.div
 						className="info-card"
@@ -27,7 +27,7 @@ class Home extends Component {
 					    450: { marginLeft: '0px', opacity: 1, ease: 'bouncePast' }
 					  }}
 					 >
-					  <h2>{(language === 'English') ? 'Some Content!' : '有些内容'}</h2>
+					  <Intro language={language} />
 					 </SparkScroll.div>
 				 </SparkProxy.div>
 

@@ -14,12 +14,11 @@ class Header extends Component {
       Mandarin: ['黑客', '跑步爱好者', '语言学家', '大提琴手', '历史学家', '歌手'],
       pointer: 0,
       interval: null,
-      playing: true,
-      pulse: false
+      pulse: false,
+      zoom: false
     };
 
     this.changePointer = this.changePointer.bind(this);
-    this.togglePlay = this.togglePlay.bind(this);
     this.onLanguageClick = this.onLanguageClick.bind(this);
     this.animationDone = this.animationDone.bind(this);
 
@@ -53,16 +52,6 @@ class Header extends Component {
     });
   }
 
-  togglePlay(evt) {
-    const video = evt.target;
-    if (this.state.playing) {
-      video.pause();
-      this.setState({playing: false});
-    } else {
-      video.play();
-      this.setState({playing: true});
-    }
-  }
 
   animationDone() {
     this.setState({pulse: false}); // resets class name so can re-animate
@@ -76,7 +65,7 @@ class Header extends Component {
 
   render() {
     const { language } = this.props;
-    const { playing, pointer, pulse } = this.state;
+    const { pointer, pulse } = this.state;
 
     return (
       <div>
@@ -90,22 +79,14 @@ class Header extends Component {
             { (language === 'English') ? '汉语' : 'English' }
           </button>
         </div>
-        <div id="top-container">
-          <div id="video-overlay" className="center-horiz">
-            <div id="title-container">
-              <h1>{ (language === 'English') ? 'Dillon Powers' : '彭郎' }</h1>
-              <h3 key={pointer} className="header-adj">{this.state[language][this.state.pointer]}</h3>
-              <div id="play-pause-container">
-                <span id="play-pause">{ playing ? 'Pause' : 'Play' }</span>
+          <div id="pic-parent">
+            <div id="pic-child" className="center-horiz">
+              <div id="title-container">
+                <h1 className="header-txt">{ (language === 'English') ? 'Dillon Powers' : '彭郎' }</h1>
+                <h3 key={pointer} className="header-txt header-adj">{this.state[language][this.state.pointer]}</h3>
               </div>
             </div>
           </div>
-          <div id="video-container">
-            <video onClick={this.togglePlay} playsInline autoPlay muted loop id="wheel-vid">
-              <source src="public/media/nara-wheel.mp4" />
-            </video>
-          </div>
-        </div>
       </div>
     );
   }
