@@ -1,0 +1,33 @@
+/* TAGS */
+body {
+	font-family: 'Raleway', STFangsong, 华文仿宋, FangSong, 仿宋, sans-serif;
+	margin: 0;
+	background: black;
+	color: white;
+}
+
+button {
+	z-index: 1;
+}
+
+/* CLASSES */
+
+.center-horiz {
+	display: flex;
+	justify-content: center;
+}
+
+.center-vert {
+	display: flex;
+	align-items: center;
+}
+
+.txt-center {
+	text-align: center;
+}
+
+
+/* FAKE */
+.big {
+	height: 2000px;
+}

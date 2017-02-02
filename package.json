@@ -5,7 +5,9 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack -w & nodemon server.js"
+    "start": "webpack -w & nodemon server.js",
+    "build-css": "node-sass -w assets/stylesheets/main.scss -o public/stylesheets",
+    "build-css-once": "node-sass assets/stylesheets/main.scss -o public/stylesheets"
   },
   "author": "dillonius01",
   "license": "ISC",
@@ -17,6 +19,7 @@
     "babel-preset-react": "^6.16.0",
     "basscss": "^8.0.3",
     "express": "^4.14.0",
+    "node-sass": "^4.5.0",
     "nodemon": "^1.11.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",

@@ -1,42 +1,3 @@
-/* MEDIA QUERIES AND ANIMATIONS */
-
-@media (max-width: 950px) {
-	body {
-		font-size: 8pt !important;
-	}
-}
-
-@media (max-width: 750px) {
-	body {
-		font-size: 5pt !important;
-	}
-}
-
-@keyframes fade {
-	0% { color: rgba(0,0,0,0);  }
-	20% { color: white; }
-	80% { color: white; }
-	100% { color: rgba(0,0,0,0); }
-}
-
-@keyframes pulseOnce {
-	0%, 100% { transform: scale(1); }
-	50% { transform: scale(1.2); }
-}
-
-/* TAGS */
-body {
-	font-family: 'Raleway', STFangsong, 华文仿宋, FangSong, 仿宋, sans-serif;
-	margin: 0;
-	background: black;
-	color: white;
-}
-
-button {
-	z-index: 1;
-}
-
-
 /* CLASSES */
 .header-adj {
 	animation: fade 4s;
@@ -51,42 +12,6 @@ button {
 	width: 100%;
 }
 
-.pulse {
-	animation: pulseOnce 0.5s;
-	-webkit-animation: pulseOnce 0.5s;
-	-moz-animation: pulseOnce 0.5s;
-	-o-animation: pulseOnce 0.5s;
-}
-
-
-.info-card {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.center-horiz {
-	display: flex;
-	justify-content: center;
-}
-
-.center-vert {
-	display: flex;
-	align-items: center;
-}
-
-
-.big {
-	height: 2000px;
-}
-
-.txt-center {
-	text-align: center;
-}
-
-.txt-intro {
-	margin: 0;
-}
 
 /* IDS */
 #btn-language {
@@ -141,14 +66,11 @@ button {
 	font-size: 2.5em;
 	text-align: center;
 
-	background-image: url("media/yangshuo.jpg");
+	background-image: url("/public/media/yangshuo.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	transition: all 4s ease;
-	-webkit-transition: all 4s ease;
-	-moz-transition: all 4s ease;
-	-o-transition: all 4s ease;
-	-ms-transition: all 4s ease;
+
+	@include transition-all-ease(4s);
 }
 
 #pic-parent:hover #pic-child,
@@ -156,19 +78,26 @@ button {
 	transform: scale(1.1);
 }
 
+#pic-parent:hover #title-container,
+#pic-parent:focus #title-container {
+	transform: scale(0.909090909);
+/*	transform: none !important;*/
+}
+
 
 #title-container {
 	width: 100%;
 	background-image: 
-	linear-gradient(
-		to right,
-		rgba(0,0,0,0),
-		rgba(0,0,0,1) 25%,
-		rgba(0,0,0,1) 75%,
-		rgba(0,0,0,0)
-	);
+		linear-gradient(
+			to right,
+			rgba(0,0,0,0),
+			rgba(0,0,0,1) 25%,
+			rgba(0,0,0,1) 75%,
+			rgba(0,0,0,0)
+		);
 	padding: 0.15em;
-	position: absolute;
+/*	position: absolute;*/
+
+	@include transition-all-ease(4s);
 
 }
- 

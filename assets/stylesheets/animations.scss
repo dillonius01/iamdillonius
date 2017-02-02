@@ -1,0 +1,34 @@
+/* MEDIA QUERIES AND ANIMATIONS */
+
+@media (max-width: 950px) {
+	body {
+		font-size: 8pt !important;
+	}
+}
+
+@media (max-width: 750px) {
+	body {
+		font-size: 5pt !important;
+	}
+}
+
+@keyframes fade {
+	0% { color: rgba(0,0,0,0);  }
+	20% { color: white; }
+	80% { color: white; }
+	100% { color: rgba(0,0,0,0); }
+}
+
+@keyframes pulseOnce {
+	0%, 100% { transform: scale(1); }
+	50% { transform: scale(1.2); }
+}
+
+/* CLASSES */
+
+.pulse {
+	animation: pulseOnce 0.5s;
+	-webkit-animation: pulseOnce 0.5s;
+	-moz-animation: pulseOnce 0.5s;
+	-o-animation: pulseOnce 0.5s;
+}
