@@ -21,8 +21,8 @@ const Intro = props => {
 					"与朋友们携手创造播放列表"
 					}
 				</p>
-				<a href="http://wejay.me">wejay.me</a>
-				<a href="https://github.com/christophermanahan/wejay">Github</a>
+				<a target="_blank" href="http://wejay.me">wejay.me</a>
+				<a target="_blank" href="https://github.com/christophermanahan/wejay">Github</a>
 			</div>
 
 		</div>
