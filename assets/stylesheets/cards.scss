@@ -2,10 +2,11 @@
 /* CLASSES */
 .info-card {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 	margin: 0;
 	padding:0;
+	height: 50vh;
 }
 
 .big {
@@ -13,5 +14,16 @@
 }
 
 .txt-intro {
-	margin: 0;
+	margin: .5em 0 .5em 0;
+
+	&.name {
+		font-size: 3em;
+	}
+
+
+}
+
+.intro-container {
+	width: 70vw;
+	height: 100%
 }

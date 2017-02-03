@@ -5,3 +5,11 @@
 	-o-transition: all $time ease;
 	-ms-transition: all $time ease;
 }
+
+@mixin transition-background($time) {
+	transition: background $time;
+	-webkit-transition: background $time;
+	-moz-transition: background $time;
+	-o-transition: background $time;
+	-ms-transition: background $time;
+}
