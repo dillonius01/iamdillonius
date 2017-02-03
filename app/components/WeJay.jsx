@@ -21,6 +21,7 @@ const WeJay = ({ language }) => (
 		</div>
 		<div className="md-col md-col-2">
 			<a target="_blank" href="http://wejay.me">wejay.me</a>
+			<i className="zmdi zmdi-github"></i>
 			<a target="_blank" href="https://github.com/christophermanahan/wejay">Github</a>
 		</div>
 	</div>
