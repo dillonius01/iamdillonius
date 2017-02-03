@@ -82,16 +82,19 @@
 
 #title-container {
 	width: 100%;
-	background-image: 
-		linear-gradient(
-			to right,
-			rgba(0,0,0,0),
-			rgba(0,0,0,1) 25%,
-			rgba(0,0,0,1) 75%,
-			rgba(0,0,0,0)
-		);
-	padding: 0.15em;
-
 	@include transition-all-ease(4s);
+
+	.header-txt{
+		background-image: 
+			linear-gradient(
+				to right,
+				rgba(0,0,0,0),
+				rgba(0,0,0,1) 25%,
+				rgba(0,0,0,1) 75%,
+				rgba(0,0,0,0)
+			);
+		padding: 0.15em;
+
+	}
 
 }

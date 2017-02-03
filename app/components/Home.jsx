@@ -23,19 +23,31 @@ class Home extends Component {
 					<SparkScroll.div
 						className="info-card"
 					  timeline={{
-					    250: { marginLeft: '-1000px', opacity: 0 },
-					    450: { marginLeft: '0px', opacity: 1, ease: 'bouncePast' }
+							topBottom: { marginLeft: '-1000px', opacity: 0  },
+					    topCenter: { marginLeft: '0px', opacity: 1, ease: 'bouncePast' },
+					    bottomCenter: { marginLeft: '0px', opacity: 1, ease: 'bouncePast' },
+					    bottomTop: { marginLeft: '-1000px', opacity: 0 }
 					  }}
 					 >
 					  <Intro language={language} />
 					 </SparkScroll.div>
 				 </SparkProxy.div>
 
-				<div className="big">
-				  <p>paragraph that takes up a bunch of space</p>
-				</div>
+				<SparkProxy.div>
+					<SparkScroll.div
+						className="info-card"
+						timeline={{
+							topBottom: { marginRight: '-1000px', opacity: 0  },
+							topCenter: { marginRight: '0px', opacity: 1, ease: 'bouncePast' },
+							bottomCenter: { marginRight: '0px', opacity: 1, ease: 'bouncePast' },
+							bottomTop: { marginRight: '-1000px', opacity: 0 }
+						}}
+					>
+						<div style={{ height: "25vh" }}>this will be moar cool stuff</div>
+					</SparkScroll.div>
+				</SparkProxy.div>
 
-
+				<div className="big"><p>some big text here</p></div>
 			</div>
 		)
 	}

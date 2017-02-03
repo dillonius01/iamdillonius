@@ -9,15 +9,16 @@
 	text-decoration: none;
 	border: none;
 	background-color: white;
-	font-size: 1.2em;
+	font-size: 1.5em;
 	cursor: pointer;
+
+	&:focus {
+		outline: none;
+	}
+
+	&.selected {
+		background-color: #59db50;
+		border-bottom: green solid .2em;
+	}
 }
 
-
-.project-name-txt:focus {
-	outline: none;
-}
-
-.project-name-selected {
-	background-color: #59db50;
-}

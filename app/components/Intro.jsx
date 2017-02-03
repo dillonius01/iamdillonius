@@ -12,7 +12,7 @@ class Intro extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			project: null
+			project: ''
 		};
 		this.handleSelectProject = this.handleSelectProject.bind(this);
 	}
@@ -46,10 +46,16 @@ const DumbIntro = props => {
 	return(
 		<div className="clearfix intro-container">
 			<div className="sm-col sm-col-12">
-				<h2 className="txt-center txt-intro">
+				<h2 className="txt-center txt-intro name">
 					{ (language === 'English') ?
 						"Hi, my name is Dillon" :
 						"你好，我名字叫彭郎" 
+					}
+				</h2>
+				<h2 className="txt-center txt-intro">
+					{ (language === 'English') ?
+						"Among other things, I am a web developer" :
+						"我有不同身份，其中一个是软件工程师"
 					}
 				</h2>
 				<h2 className="txt-center txt-intro">
@@ -60,19 +66,19 @@ const DumbIntro = props => {
 				</h2>
 			</div>
 
-			<div className="md-col md-col-12">
-				<div className="md-col md-col-4">
-					<button className={`project-name-txt ${(project === 'wejay') ? 'project-name-selected' : ''}`} name="wejay" onClick={handleSelectProject}>weJay</button>
+			<div className="sm-col sm-col-12">
+				<div className="sm-col sm-col-4">
+					<button className={`project-name-txt ripple ${(project === 'wejay') ? 'selected' : ''}`} name="wejay" onClick={handleSelectProject}>weJay</button>
 				</div>
-				<div className="md-col md-col-4">
-					<button className={`project-name-txt ${(project === 'ratmap') ? 'project-name-selected' : ''}`} name="ratmap" onClick={handleSelectProject}>RatMap</button>
+				<div className="sm-col sm-col-4">
+					<button className={`project-name-txt ripple ${(project === 'ratmap') ? 'selected' : ''}`} name="ratmap" onClick={handleSelectProject}>RatMap</button>
 				</div>
-				<div className="md-col md-col-4">
-					<button className={`project-name-txt ${(project === 'hearts') ? 'project-name-selected' : ''}`} name="hearts" onClick={handleSelectProject}>Hearts</button>
+				<div className="sm-col sm-col-4">
+					<button className={`project-name-txt ripple ${(project === 'hearts') ? 'selected' : ''}`} name="hearts" onClick={handleSelectProject}>Hearts</button>
 				</div>
 			</div>
 
-			<div className="md-col md-col-12">
+			<div className="sm-col sm-col-12">
 				{
 					(project === 'wejay') ?
 					<WeJay language={language} />
