@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import WeJay from './WeJay';
 import RatMap from './RatMap';
-import { Link } from 'react-router';
 
 
 
@@ -45,7 +44,7 @@ class Intro extends Component {
 const DumbIntro = props => {
 	const { language, project, handleSelectProject } = props;
 	return(
-		<div className="clearfix fit">
+		<div className="clearfix intro-container">
 			<div className="sm-col sm-col-12">
 				<h2 className="txt-center txt-intro">
 					{ (language === 'English') ?
@@ -62,8 +61,15 @@ const DumbIntro = props => {
 			</div>
 
 			<div className="md-col md-col-12">
-				<button name="wejay" onClick={handleSelectProject}>weJay</button>
-				<button name="ratmap" onClick={handleSelectProject}>RatMap</button>
+				<div className="md-col md-col-4">
+					<button className={`project-name-txt ${(project === 'wejay') ? 'project-name-selected' : ''}`} name="wejay" onClick={handleSelectProject}>weJay</button>
+				</div>
+				<div className="md-col md-col-4">
+					<button className={`project-name-txt ${(project === 'ratmap') ? 'project-name-selected' : ''}`} name="ratmap" onClick={handleSelectProject}>RatMap</button>
+				</div>
+				<div className="md-col md-col-4">
+					<button className={`project-name-txt ${(project === 'hearts') ? 'project-name-selected' : ''}`} name="hearts" onClick={handleSelectProject}>Hearts</button>
+				</div>
 			</div>
 
 			<div className="md-col md-col-12">
@@ -78,6 +84,12 @@ const DumbIntro = props => {
 				{
 					(project === 'ratmap') ?
 					<RatMap language={language} />
+					:
+					null
+				}
+				{
+					(project === 'hearts') ?
+					<div language={language}>Hearts</div>
 					:
 					null
 				}
