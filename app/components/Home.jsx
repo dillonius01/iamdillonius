@@ -19,6 +19,7 @@ class Home extends Component {
 		return(
 			<div>
 				<Header />
+				<div className="spacer"></div>
 				<SparkProxy.div>
 					<SparkScroll.div
 						className="info-card"
@@ -32,6 +33,8 @@ class Home extends Component {
 					  <Intro language={language} />
 					 </SparkScroll.div>
 				 </SparkProxy.div>
+
+				 <div className="spacer"></div>
 
 				<SparkProxy.div>
 					<SparkScroll.div

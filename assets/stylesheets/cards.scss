@@ -6,7 +6,7 @@
 	justify-content: center;
 	margin: 0;
 	padding:0;
-	height: 50vh;
+	height: 65vh;
 }
 
 .big {
@@ -27,3 +27,60 @@
 	width: 70vw;
 	height: 100%
 }
+
+.card-container {
+	padding: 1em;
+}
+
+.card-title {	
+	.subtitle {
+		text-align: center;
+		display: block;
+		width: 100%;
+	}
+
+	h3 {
+		font-size: 2em;
+		margin: 0;
+	}
+
+	h5 {
+		font-size: 1.2em;
+		margin: 0;
+	}
+
+}
+
+
+.link-container {
+	
+	text-align: center;
+	
+	a {
+		text-decoration: none;
+		font-size: 2em;
+	
+		.zmdi-youtube-play {
+			color: red;
+		}
+
+		.zmdi-github {
+			color: purple;
+		}
+
+	}
+	.img-title {
+		width: 80%;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.project-bullets {
+	
+	li {
+		margin-bottom: .5em;
+	}
+
+}
+

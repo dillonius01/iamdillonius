@@ -1,6 +1,6 @@
 /* TAGS */
 body {
-	font-family: 'Raleway', STFangsong, 华文仿宋, FangSong, 仿宋, sans-serif;
+	font-family: $font-stack;
 	margin: 0;
 	background: black;
 	color: white;
@@ -27,7 +27,13 @@ button {
 }
 
 
-/* FAKE */
+
+
+/* FOR SPACING */
 .big {
-	height: 2000px;
+	height: 10000px;
+}
+
+.spacer {
+	height: 50vh;
 }
