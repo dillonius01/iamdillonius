@@ -31,6 +31,7 @@ class Intro extends Component {
 			<DumbIntro
 				language={language}
 				project={projects[idx]}
+				idx={idx}
 				handleSelectProject={this.handleSelectProject}
 			/>
 		)
@@ -43,14 +44,14 @@ class Intro extends Component {
 /* -----------------    PRESENTATIONAL COMPONENT     ------------------ */
 
 const DumbIntro = props => {
-	const { language, project, handleSelectProject } = props;
+	const { language, project, handleSelectProject, idx } = props;
 	return(
 		<div className="clearfix intro-container">
 			<div className="sm-col sm-col-12">
 				<h2 className="txt-center txt-intro name">
 					{ (language === 'English') ?
 						"Hi, my name is Dillon" :
-						"你好，我名字叫彭郎" 
+						"你好，我名字叫彭郎"
 					}
 				</h2>
 				<h2 className="txt-center txt-intro">
@@ -77,6 +78,9 @@ const DumbIntro = props => {
 				<div className="sm-col sm-col-4">
 					<button className={`project-name-txt ripple ${(project === 'newsmirror') ? 'selected' : ''}`} name="newsmirror" value={2} onClick={handleSelectProject}>News Mirror</button>
 				</div>
+			</div>
+			<div className="sm-col sm-col-12 underline-container">
+				<div className={`underline pos-${idx}`}></div>
 			</div>
 
 			<div className="sm-col sm-col-12">
