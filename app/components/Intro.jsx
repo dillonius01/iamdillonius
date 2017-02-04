@@ -12,13 +12,13 @@ class Intro extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			project: ''
+			project: 'wejay'
 		};
 		this.handleSelectProject = this.handleSelectProject.bind(this);
 	}
 
 	handleSelectProject(evt) {
-		const project = evt.target.name; // each button needs a name property that matches with the project
+		const project = evt.target.name; 
 		this.setState({ project });
 	}
 
@@ -95,7 +95,7 @@ const DumbIntro = props => {
 				}
 				{
 					(project === 'hearts') ?
-					<div language={language}>Hearts</div>
+					<div language={language}>{(language === 'English') ? "Hearts" : '打牌'}</div>
 					:
 					null
 				}

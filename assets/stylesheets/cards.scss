@@ -48,15 +48,39 @@
 		font-size: 1.2em;
 		margin: 0;
 	}
+
 }
+
 
 .link-container {
 	
 	text-align: center;
 	
 	a {
-		color: pink;
 		text-decoration: none;
+		font-size: 2em;
+	
+		.zmdi-youtube-play {
+			color: red;
+		}
+
+		.zmdi-github {
+			color: purple;
+		}
+
 	}
+	.img-title {
+		width: 80%;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.project-bullets {
+	
+	li {
+		margin-bottom: .5em;
+	}
+
 }
 
