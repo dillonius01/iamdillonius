@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import WeJay from './WeJay';
 import RatMap from './RatMap';
-
+import NewsMirror from './NewsMirror';
 
 
 /* -----------------    STATEFUL REACT COMPONENT     ------------------ */
@@ -12,24 +12,25 @@ class Intro extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			project: 'wejay'
+			projects: ['wejay', 'ratmap', 'newsmirror'],
+			idx: 0
 		};
 		this.handleSelectProject = this.handleSelectProject.bind(this);
 	}
 
 	handleSelectProject(evt) {
-		const project = evt.target.name; 
-		this.setState({ project });
+		const idx = +evt.target.value;
+		this.setState({ idx });
 	}
 
 	render() {
 		const { language } = this.props;
-		const { project } = this.state;
+		const { projects, idx } = this.state;
 
 		return (
 			<DumbIntro
 				language={language}
-				project={project}
+				project={projects[idx]}
 				handleSelectProject={this.handleSelectProject}
 			/>
 		)
@@ -68,13 +69,13 @@ const DumbIntro = props => {
 
 			<div className="sm-col sm-col-12">
 				<div className="sm-col sm-col-4">
-					<button className={`project-name-txt ripple ${(project === 'wejay') ? 'selected' : ''}`} name="wejay" onClick={handleSelectProject}>weJay</button>
+					<button className={`project-name-txt ripple ${(project === 'wejay') ? 'selected' : ''}`} name="wejay" value={0} onClick={handleSelectProject}>weJay</button>
 				</div>
 				<div className="sm-col sm-col-4">
-					<button className={`project-name-txt ripple ${(project === 'ratmap') ? 'selected' : ''}`} name="ratmap" onClick={handleSelectProject}>RatMap</button>
+					<button className={`project-name-txt ripple ${(project === 'ratmap') ? 'selected' : ''}`} name="ratmap" value={1} onClick={handleSelectProject}>RatMap</button>
 				</div>
 				<div className="sm-col sm-col-4">
-					<button className={`project-name-txt ripple ${(project === 'hearts') ? 'selected' : ''}`} name="hearts" onClick={handleSelectProject}>Hearts</button>
+					<button className={`project-name-txt ripple ${(project === 'newsmirror') ? 'selected' : ''}`} name="newsmirror" value={2} onClick={handleSelectProject}>News Mirror</button>
 				</div>
 			</div>
 
@@ -94,8 +95,8 @@ const DumbIntro = props => {
 					null
 				}
 				{
-					(project === 'hearts') ?
-					<div language={language}>{(language === 'English') ? "Hearts" : '打牌'}</div>
+					(project === 'newsmirror') ?
+					<NewsMirror language={language} />
 					:
 					null
 				}
