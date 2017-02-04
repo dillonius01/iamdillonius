@@ -31,6 +31,9 @@ const WeJay = ({ language }) => (
 						与朋友们携手创造播放列表
 					</li>
 					<li>
+						用户通过Soundcloud寻找并点赞喜欢的歌曲，因此可以积累DJ分
+					</li>
+					<li>
 						使用的工具包括React, Redux, 与谷歌Firebase
 					</li>
 				</ul>

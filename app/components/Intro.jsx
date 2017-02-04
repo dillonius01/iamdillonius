@@ -67,7 +67,7 @@ const DumbIntro = props => {
 				</h2>
 			</div>
 
-			<div className="sm-col sm-col-12">
+			<div className="sm-col sm-col-12 project-button-container">
 				<div className="sm-col sm-col-4">
 					<button className={`project-name-txt ripple ${(project === 'wejay') ? 'selected' : ''}`} name="wejay" value={0} onClick={handleSelectProject}>weJay</button>
 				</div>
