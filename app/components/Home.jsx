@@ -4,6 +4,7 @@ import { SparkScroll, SparkProxy } from './AppSpark';
 
 import Header from './Header';
 import Intro from './Intro';
+import Places from './Places';
 
 
 /* -----------------    PRESENTATIONAL COMPONENT     ------------------ */
@@ -28,8 +29,7 @@ class Home extends Component {
 					    topCenter: { marginLeft: '0px', opacity: 1, ease: 'bouncePast' },
 					    bottomCenter: { marginLeft: '0px', opacity: 1, ease: 'bouncePast' },
 					    bottomTop: { marginLeft: '-1000px', opacity: 0 }
-					  }}
-					 >
+					  }}>
 					  <Intro language={language} />
 					 </SparkScroll.div>
 				 </SparkProxy.div>
@@ -44,9 +44,8 @@ class Home extends Component {
 							topCenter: { marginRight: '0px', opacity: 1, ease: 'bouncePast' },
 							bottomCenter: { marginRight: '0px', opacity: 1, ease: 'bouncePast' },
 							bottomTop: { marginRight: '-1000px', opacity: 0 }
-						}}
-					>
-						<div style={{ height: "25vh" }}>this will be moar cool stuff</div>
+						}}>
+						<Places language={language} />
 					</SparkScroll.div>
 				</SparkProxy.div>
 
