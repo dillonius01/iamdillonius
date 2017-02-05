@@ -9,6 +9,10 @@ export const setPicture = picture => ({
   picture
 });
 
+export const clearPicture = () => ({
+  type: CLEAR_PICTURE
+})
+
 /* -------------       REDUCER     ------------------- */
 
 const reducer = (state = '', action) => {

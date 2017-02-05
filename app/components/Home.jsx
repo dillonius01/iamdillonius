@@ -5,6 +5,9 @@ import { SparkScroll, SparkProxy } from './AppSpark';
 import Header from './Header';
 import Intro from './Intro';
 import Places from './Places';
+import Image from './Image';
+
+import { setPicture, clearPicture } from '../ducks/picture';
 
 
 /* -----------------    PRESENTATIONAL COMPONENT     ------------------ */
@@ -16,11 +19,13 @@ class Home extends Component {
 	}
 
 	render() {
-		const { language } = this.props;
+		const { language, picture, setPicture, clearPicture } = this.props;
 		return(
 			<div>
 				<Header />
+
 				<div className="spacer"></div>
+
 				<SparkProxy.div>
 					<SparkScroll.div
 						className="info-card"
@@ -30,11 +35,11 @@ class Home extends Component {
 					    bottomCenter: { marginLeft: '0px', opacity: 1, ease: 'bouncePast' },
 					    bottomTop: { marginLeft: '-1000px', opacity: 0 }
 					  }}>
-					  <Intro language={language} />
-					 </SparkScroll.div>
-				 </SparkProxy.div>
+						<Intro language={language} />
+					</SparkScroll.div>
+				</SparkProxy.div>
 
-				 <div className="spacer"></div>
+				<div className="spacer"></div>
 
 				<SparkProxy.div>
 					<SparkScroll.div
@@ -45,13 +50,16 @@ class Home extends Component {
 							bottomCenter: { marginRight: '0px', opacity: 1, ease: 'bouncePast' },
 							bottomTop: { marginRight: '-1000px', opacity: 0 }
 						}}>
-						<Places language={language} />
+						<Places language={language} setPicture={setPicture} />
 					</SparkScroll.div>
 				</SparkProxy.div>
 
-				<div className="big"><p>some big text here</p></div>
+				<div className="spacer"></div>
+
+				<Image picture={picture} clearPicture={clearPicture} />
+
 			</div>
-		)
+		);
 	}
 
 }
@@ -60,6 +68,13 @@ class Home extends Component {
 /* -----------------    REDUX CONTAINER     ------------------ */
 
 
-const mapStateToProps = ({ language }) => ({ language });
+const mapStateToProps = ({ language, picture }) => ({ language, picture });
 
-export default connect(mapStateToProps, null)(Home);
+const mapDispatchToProps = dispatch => ({
+
+	setPicture: picture => dispatch(setPicture(picture)),
+	clearPicture: () => dispatch(clearPicture())
+
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

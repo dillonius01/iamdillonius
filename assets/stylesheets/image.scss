@@ -1,0 +1,15 @@
+.img-jumbo {
+	z-index: 3;
+	width: 65vw;
+	position: fixed;
+}
+
+.img-thumbnail {
+	width: 60%;
+	margin: 0 auto;
+	display: block;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
