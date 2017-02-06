@@ -47,7 +47,7 @@ const DumbIntro = props => {
 	const { language, project, handleSelectProject, idx } = props;
 	return(
 		<div className="clearfix intro-container">
-			<div className="sm-col sm-col-12">
+			<div className="col-12">
 				<h2 className="txt-center txt-intro name">
 					{ (language === 'English') ?
 						"Hi, my name is Dillon" :
@@ -68,22 +68,22 @@ const DumbIntro = props => {
 				</h2>
 			</div>
 
-			<div className="sm-col sm-col-12 project-button-container">
-				<div className="sm-col sm-col-4">
+			<div className="col-12 project-button-container">
+				<div className="col-4 inline-block">
 					<button className={`project-name-txt ripple ${(project === 'wejay') ? 'selected' : ''}`} name="wejay" value={0} onClick={handleSelectProject}>weJay</button>
 				</div>
-				<div className="sm-col sm-col-4">
+				<div className="col-4 inline-block">
 					<button className={`project-name-txt ripple ${(project === 'ratmap') ? 'selected' : ''}`} name="ratmap" value={1} onClick={handleSelectProject}>RatMap</button>
 				</div>
-				<div className="sm-col sm-col-4">
+				<div className="col-4 inline-block">
 					<button className={`project-name-txt ripple ${(project === 'newsmirror') ? 'selected' : ''}`} name="newsmirror" value={2} onClick={handleSelectProject}>News Mirror</button>
 				</div>
 			</div>
-			<div className="sm-col sm-col-12 underline-container">
+			<div className="col-12 underline-container">
 				<div className={`underline pos-${idx}`}></div>
 			</div>
 
-			<div className="sm-col sm-col-12">
+			<div className="col-12">
 				{
 					(project === 'wejay') ?
 					<WeJay language={language} />

@@ -7,12 +7,12 @@ import React, { Component } from 'react';
 const WeJay = ({ language }) => (
 
 	<div className="card-container clearfix">
-		<div className="md-col md-col-12 card-title">
+		<div className="col-12 card-title">
 			<h3 className="subtitle">weJay</h3>
 			<h5 className="subtitle">{ (language === 'English') ? "Everyone's a DJ" : "连你也可以当DJ"}</h5>
 		</div>
 
-		<div className="md-col md-col-12">
+		<div className="col-12">
 			{ (language === 'English') ?
 				<ul className="project-bullets">
 					<li>
@@ -40,18 +40,18 @@ const WeJay = ({ language }) => (
 				}
 		</div>
 
-		<div className="md-col md-col-12 center-vert">
-			<div className="md-col md-col-4 link-container">
+		<div className="col-12 center-vert">
+			<div className="col-4 link-container">
 				<a target="_blank" href="https://github.com/christophermanahan/wejay">
 					<i className="zmdi zmdi-github zmdi-hc-2x"></i>
 				</a>
 			</div>
-			<div className="md-col md-col-4 link-container">
+			<div className="col-4 link-container">
 				<a target="_blank" href="http://wejay.me">
 					<img className="img-title" src="/public/logos/wejay.png"></img>
 				</a>
 			</div>
-			<div className="md-col md-col-4 link-container">
+			<div className="col-4 link-container">
 				<a target="_blank" href="https://www.youtube.com/watch?v=-XEOkNGz8m0">
 					<i className="zmdi zmdi-youtube-play zmdi-hc-2x"></i>
 				</a>

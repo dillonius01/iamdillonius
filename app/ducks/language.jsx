@@ -12,10 +12,10 @@ export const toggleLanguage = () => ({
 const reducer = (state = 'English', action) => {
   switch (action.type){
     case TOGGLE_LANGUAGE:
-        return (state === 'English') ? 'Mandarin' : 'English';
+      return (state === 'English') ? 'Mandarin' : 'English';
 
     default:
-        return state;
+      return state;
     }
 };
 
