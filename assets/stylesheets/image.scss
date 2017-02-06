@@ -30,4 +30,24 @@
 }
 
 
+.aspect {
+	position: relative;
+	height: 0;
+	width: 60%;
+	padding-top: 33.75%; // what is this sorcery? padding set relative to WIDTH
+	overflow: hidden;
+	display: block;
 
+	margin-left: 20%; // % of WIDTH of CONTAINER, so centers item
+	margin-right: 20%;
+	
+	.img-thumbnail {
+		position: absolute;
+		left: 0;
+		right: 0;
+		width: 100%;
+		top: 0;
+
+	}
+
+}

@@ -7,12 +7,12 @@ import React, { Component } from 'react';
 const NewsMirror = ({ language }) => (
 
 	<div className="card-container clearfix">
-		<div className="md-col md-col-12 card-title">
+		<div className="col-12 card-title">
 			<h3 className="subtitle">News Mirror</h3>
 			<h5 className="subtitle">{ (language === 'English') ? "Updates from the other side" : "双面之信息"}</h5>
 		</div>
 
-		<div className="md-col md-col-12">
+		<div className="col-12">
 			{ (language === 'English') ?
 				<ul className="project-bullets">
 					<li>
@@ -40,8 +40,8 @@ const NewsMirror = ({ language }) => (
 				}
 		</div>
 
-		<div className="md-col md-col-12 center-vert">
-			<div className="md-col md-col-12 link-container">
+		<div className="col-12 center-vert">
+			<div className="col-12 link-container">
 				<a target="_blank" href="https://github.com/harryttd/news-mirror">
 					<i className="zmdi zmdi-github zmdi-hc-2x"></i>
 				</a>

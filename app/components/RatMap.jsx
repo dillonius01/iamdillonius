@@ -7,12 +7,12 @@ import React, { Component } from 'react';
 const RatMap = ({ language }) => (
 
 	<div className="card-container clearfix">
-		<div className="md-col md-col-12 card-title">
+		<div className="col-12 card-title">
 			<h3 className="subtitle">RatMap</h3>
 			<h5 className="subtitle">{ (language === 'English') ? "Experience the real New York City" : "体验地道的纽约"}</h5>
 		</div>
 
-		<div className="md-col md-col-12">
+		<div className="col-12">
 			{ (language === 'English') ?
 				<ul className="project-bullets">
 					<li>
@@ -41,14 +41,14 @@ const RatMap = ({ language }) => (
 				}
 		</div>
 
-		<div className="md-col md-col-12 center-vert">
-			<div className="md-col md-col-6 link-container">
+		<div className="col-12 center-vert">
+			<div className="col-6 link-container">
 				<a target="_blank" href="https://github.com/dillonius01/ratmap">
 					<i className="zmdi zmdi-github zmdi-hc-2x"></i>
 				</a>
 			</div>
 
-			<div className="md-col md-col-6 link-container">
+			<div className="col-6 link-container">
 				<a target="_blank" href="https://www.youtube.com/watch?v=eCVuL15I0G4">
 					<i className="zmdi zmdi-youtube-play zmdi-hc-2x"></i>
 				</a>

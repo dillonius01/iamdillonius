@@ -48,13 +48,15 @@ class Home extends Component {
 							topBottom: { marginRight: '-1000px', opacity: 0  },
 							topCenter: { marginRight: '0px', opacity: 1, ease: 'bouncePast' },
 							bottomCenter: { marginRight: '0px', opacity: 1, ease: 'bouncePast' },
-							bottomTop: { marginRight: '-1000px', opacity: 0 }
+							bottomTop: { opacity: 0 }
 						}}>
 						<Places language={language} setPicture={setPicture} />
 					</SparkScroll.div>
 				</SparkProxy.div>
 
 				<div className="spacer"></div>
+				<div className="spacer"></div>
+
 
 				<Image picture={picture} clearPicture={clearPicture} />
 
