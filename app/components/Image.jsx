@@ -5,16 +5,16 @@ import React, { Component } from 'react';
 
 const DumbImage = props => {
 	
-	const { picture } = props;
+	const { picture, clearPicture } = props;
 
 	return (
-		<div>
+		<div className={`modal-container ${(picture) ? 'showing' : ''}`} onClick={clearPicture}>
 			{
 				picture ?
-					<img src={`public/media/${picture}`} className="img-jumbo" /> :
+					<img src={`public/media/${picture}`} className="img-jumbo img-zoom" />
+					:
 					null
-			}
-			
+			}	
 		</div>
 	)
 }

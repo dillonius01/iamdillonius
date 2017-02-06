@@ -1,7 +1,25 @@
-.img-jumbo {
-	z-index: 3;
-	width: 65vw;
+.modal-container {
+	width: 100vw;
+	display: none;
+	margin: 0 auto;
 	position: fixed;
+	top: 0;
+	left: 0; 
+	height: 100vh;
+	padding-top: 5vh;
+	background-color: rgba(0,0,0,0.7);
+
+
+	&.showing {
+		display: block;
+		z-index: 3;
+	}
+}
+
+.img-jumbo {
+	width: 65%;
+	display: block;
+	margin: 0 auto;
 }
 
 .img-thumbnail {
