@@ -60,32 +60,32 @@ const DumbPlaces = props => {
 			</div>
 
 			<div className="sm-col sm-col-12">
-				<div className="sm-col sm-col-12 md-col md-col-6">
+				<div className="sm-col sm-col-12 md-col md-col-4">
 					<img name="central-park.jpg" className="img-thumbnail" src="public/media/central-park.jpg" onClick={selectPicture} />
 					<h2 className="center">{(language === 'English') ? "New York, NY" : "纽约"}</h2>
 				</div>
 
-				<div className="sm-col sm-col-12 md-col md-col-6">
+				<div className="sm-col sm-col-12 md-col md-col-4">
 					<img name="scooter.jpg" className="img-thumbnail" src="public/media/scooter.jpg" onClick={selectPicture} />
 					<h2 className="center">{(language === 'English') ? "Beijing, China" : "北京"}</h2>
 				</div>
 
-				<div className="sm-col sm-col-12 md-col md-col-6">
+				<div className="sm-col sm-col-12 md-col md-col-4">
 					<img name="pic3" onClick={selectPicture} />
 					<h2 className="center">{(language === 'English') ? "Honolulu, HI" : "夏威夷"}</h2>
 				</div>
 
-				<div className="sm-col sm-col-12 md-col md-col-6">
+				<div className="sm-col sm-col-12 md-col md-col-4">
 					<img name="pic4" onClick={selectPicture} />
 					<h2 className="center">{(language === 'English') ? "Cambrdige, MA" : "波士顿"}</h2>
 				</div>
 
-				<div className="sm-col sm-col-12 md-col md-col-6">
+				<div className="sm-col sm-col-12 md-col md-col-4">
 					<img name="pic5" onClick={selectPicture} />
 					<h2 className="center">{(language === 'English') ? "Naples, Italy" : "意大利"}</h2>
 				</div>
 
-				<div className="sm-col sm-col-12 md-col md-col-6">
+				<div className="sm-col sm-col-12 md-col md-col-4">
 					<img name="pic6" onClick={selectPicture} />
 					<h2 className="center">{(language === 'English') ? "Seattle, WA" : "西雅图"}</h2>
 				</div>
