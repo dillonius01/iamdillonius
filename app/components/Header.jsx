@@ -58,9 +58,9 @@ class Header extends Component {
   }
 
   onLanguageClick() {
-    const { toggle_language } = this.props;
+    const { toggleLanguage } = this.props;
     this.setState({pulse: true}); // toggles class name so animation runs
-    toggle_language();
+    toggleLanguage();
   }
 
   render() {
@@ -99,7 +99,7 @@ class Header extends Component {
 const mapStateToProps = ({ language }) => ({ language });
 
 const mapDispatchToProps = dispatch => ({
-  toggle_language: () => dispatch(toggleLanguage())
+  toggleLanguage: () => dispatch(toggleLanguage())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

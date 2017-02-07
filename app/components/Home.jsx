@@ -47,7 +47,7 @@ class Home extends Component {
 						timeline={{
 							topBottom: { marginRight: '-1000px', opacity: 0  },
 							topCenter: { marginRight: '0px', opacity: 1, ease: 'bouncePast' },
-							bottomCenter: { marginRight: '0px', opacity: 1, ease: 'bouncePast' },
+							centerTop: { marginRight: '0px', opacity: 1, ease: 'bouncePast' },
 							bottomTop: { opacity: 0 }
 						}}>
 						<Places language={language} setPicture={setPicture} />

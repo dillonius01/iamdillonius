@@ -40,11 +40,11 @@
 	margin: 1em 1em 0em 0em;
 	right: 0;
 	position: absolute;
+
 }
 
 #pic-parent {
-	width: 100vw;
-	height: 56vw;
+	height: 100vh;
 	overflow: hidden;
 	margin-bottom: 4em;
 }
@@ -74,7 +74,6 @@
 #pic-parent:hover #title-container,
 #pic-parent:focus #title-container {
 	transform: scale(0.909090909);
-/*	transform: none !important;*/
 }
 
 

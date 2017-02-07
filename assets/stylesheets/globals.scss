@@ -1,6 +1,18 @@
 /* TAGS */
 @import 'variables';
 
+@media (max-width: 950px) {
+	body {
+		font-size: 8pt !important;
+	}
+}
+
+@media (max-width: 450px) {
+	body {
+		font-size: 6pt !important;
+	}
+}
+
 body {
 	font-family: $font-stack;
 	margin: 0;
@@ -35,4 +47,8 @@ button {
 
 .spacer {
 	height: 50vh;
+
+	@media (max-width: 450px) {
+		height: 75vh;
+	}
 }
