@@ -25,9 +25,7 @@ class Home extends Component {
 	}
 
 	handleResize(evt) {
-		// console.log('evt.target is', evt.target)
 		const width = evt.target.innerWidth;
-		console.log('handling for new width ', width)
 		if (!width) return;
 		this.setState({ width });
 	}
