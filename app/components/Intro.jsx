@@ -46,7 +46,7 @@ class Intro extends Component {
 const DumbIntro = props => {
 	const { language, project, handleSelectProject, idx } = props;
 	return(
-		<div className="clearfix intro-container">
+		<div className="clearfix card-container">
 			<div className="col-12">
 				<h2 className="txt-center txt-intro name">
 					{ (language === 'English') ?
