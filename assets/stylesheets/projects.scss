@@ -29,6 +29,11 @@
 
 .project-button-container {
 	margin-top: 1em;
+	
+	@media (max-width: 750px) {
+		font-size: 6pt;
+	}
+
 }
 
 .underline-container {
