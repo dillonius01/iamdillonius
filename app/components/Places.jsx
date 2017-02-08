@@ -37,7 +37,7 @@ class Places extends Component {
 const DumbPlaces = props => {
 	const { language, selectPicture } = props;
 	return(
-		<div className="clearfix intro-container">
+		<div className="clearfix card-container">
 			<div className="sm-col sm-col-12">
 				<h2 className="txt-center txt-intro name">
 					{ (language === 'English') ?
@@ -83,7 +83,7 @@ const DumbPlaces = props => {
 
 				<div className="inline-block col-6 md-col md-col-4">
 					<div className="aspect">
-						<img name="mtauburn.jpg" className="img-thumbnail" src="public/media/mtauburn.jpg" onClick={selectPicture}/>
+						<img name="weeks.jpg" className="img-thumbnail" src="public/media/weeks.jpg" onClick={selectPicture}/>
 					</div>
 					<h2 className="center">{(language === 'English') ? "Cambrdige, MA" : "波士顿"}</h2>
 				</div>

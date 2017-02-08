@@ -8,7 +8,7 @@ const RatMap = ({ language }) => (
 
 	<div className="card-container clearfix">
 		<div className="col-12 card-title">
-			<h3 className="subtitle">RatMap</h3>
+			<h3 className="subtitle">{(language === 'English') ? "RatMap" : "鼠图"}</h3>
 			<h5 className="subtitle">{ (language === 'English') ? "Experience the real New York City" : "体验地道的纽约"}</h5>
 		</div>
 

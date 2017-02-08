@@ -6,6 +6,7 @@ import Header from './Header';
 import Intro from './Intro';
 import Places from './Places';
 import Image from './Image';
+import Contact from './Contact';
 
 import { setPicture, clearPicture } from '../ducks/picture';
 
@@ -79,13 +80,19 @@ class Home extends Component {
 							timeline={{
 								topBottom: { marginRight: '-1000px', opacity: 0  },
 								topCenter: { marginRight: '0px', opacity: 1, ease: 'bouncePast' },
-								centerTop: { marginRight: '0px', opacity: 1, ease: 'bouncePast' },
-								bottomTop: { opacity: 0 }
+								bottomCenter: { marginRight: '0px', opacity: 1, ease: 'bouncePast' },
+								bottomTop: { marginRight: '-1000px', opacity: 0 }
 							}}>
 							<Places language={language} setPicture={setPicture} />
 						</SparkScroll.div>
 					</SparkProxy.div>	
 				}
+				
+				<div className="spacer"></div>
+
+				<div className="info-card">
+					<Contact language={language}/>
+				</div>
 
 				<Image picture={picture} clearPicture={clearPicture} />
 

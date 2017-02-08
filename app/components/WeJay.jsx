@@ -8,7 +8,7 @@ const WeJay = ({ language }) => (
 
 	<div className="card-container clearfix">
 		<div className="col-12 card-title">
-			<h3 className="subtitle">weJay</h3>
+			<h3 className="subtitle">{(language === 'English') ? "weJay" : "微贼"}</h3>
 			<h5 className="subtitle">{ (language === 'English') ? "Everyone's a DJ" : "连你也可以当DJ"}</h5>
 		</div>
 
