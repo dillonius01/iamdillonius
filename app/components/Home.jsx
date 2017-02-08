@@ -31,7 +31,6 @@ class Home extends Component {
 	}
 
 	componentWillMount() {
-		console.log('shit is mounting')
 		window.addEventListener('resize', this.handleResize);
 	}
 
