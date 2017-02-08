@@ -8,7 +8,7 @@ const NewsMirror = ({ language }) => (
 
 	<div className="card-container clearfix">
 		<div className="col-12 card-title">
-			<h3 className="subtitle">News Mirror</h3>
+			<h3 className="subtitle">{(language === 'English') ? "News Mirror" : "镜子新闻"}</h3>
 			<h5 className="subtitle">{ (language === 'English') ? "Updates from the other side" : "双面之信息"}</h5>
 		</div>
 

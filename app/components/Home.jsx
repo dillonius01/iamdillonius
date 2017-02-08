@@ -88,13 +88,13 @@ class Home extends Component {
 					</SparkProxy.div>	
 				}
 				
+				<div className="spacer"></div>
+
 				<div className="info-card">
 					<Contact language={language}/>
 				</div>
 
 				<Image picture={picture} clearPicture={clearPicture} />
-
-				<div className="spacer"></div>
 
 			</div>
 		);

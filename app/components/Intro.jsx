@@ -70,13 +70,30 @@ const DumbIntro = props => {
 
 			<div className="col-12 project-button-container">
 				<div className="col-4 inline-block">
-					<button className={`project-name-txt ripple ${(project === 'wejay') ? 'selected' : ''}`} name="wejay" value={0} onClick={handleSelectProject}>weJay</button>
+					<button
+						className={`project-name-txt ripple ${(project === 'wejay') ? 'selected' : ''}`}
+						name="wejay"
+						value={0}
+						onClick={handleSelectProject}>
+						{(language === 'English') ? "weJay" : "微贼"}
+					</button>
 				</div>
 				<div className="col-4 inline-block">
-					<button className={`project-name-txt ripple ${(project === 'ratmap') ? 'selected' : ''}`} name="ratmap" value={1} onClick={handleSelectProject}>RatMap</button>
+					<button className={`project-name-txt ripple ${(project === 'ratmap') ? 'selected' : ''}`}
+						name="ratmap"
+						value={1}
+						onClick={handleSelectProject}>
+						{(language === 'English') ? "RatMap" : "鼠图"}
+					</button>
 				</div>
 				<div className="col-4 inline-block">
-					<button className={`project-name-txt ripple ${(project === 'newsmirror') ? 'selected' : ''}`} name="newsmirror" value={2} onClick={handleSelectProject}>News Mirror</button>
+					<button
+						className={`project-name-txt ripple ${(project === 'newsmirror') ? 'selected' : ''}`}
+						name="newsmirror"
+						value={2}
+						onClick={handleSelectProject}>
+						{(language === 'English') ? "News Mirror" : "镜子新闻"}
+					</button>
 				</div>
 			</div>
 			<div className="col-12 underline-container">

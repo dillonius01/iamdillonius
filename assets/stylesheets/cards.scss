@@ -70,11 +70,23 @@
 		font-size: 2em;
 	
 		.zmdi-youtube-play {
-			color: red;
+			color: $youtube-red;
 		}
 
 		.zmdi-github {
 			color: $github-purple;
+		}
+
+		.zmdi-linkedin {
+			color: $linkedin-blue;
+		}
+
+		.zmdi-email {
+			color: $email-color;
+		}
+
+		.zmdi-download {
+			color: $resume-color;
 		}
 
 	}
