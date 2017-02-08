@@ -16,47 +16,76 @@ import { setPicture, clearPicture } from '../ducks/picture';
 class Home extends Component {
 	constructor(props) {
 		super(props);
+		const width = window.innerWidth;
+		this.state = {
+			width
+		};
+		this.handleResize = this.handleResize.bind(this);
 	}
+
+	handleResize(evt) {
+		// console.log('evt.target is', evt.target)
+		const width = evt.target.innerWidth;
+		console.log('handling for new width ', width)
+		if (!width) return;
+		this.setState({ width });
+	}
+
+	componentWillMount() {
+		console.log('shit is mounting')
+		window.addEventListener('resize', this.handleResize);
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener('resize', this.handleResize);
+	}
+
 
 	render() {
 		const { language, picture, setPicture, clearPicture } = this.props;
+		const { width } = this.state;
 		return(
 			<div>
 				<Header />
 
-				<div className="spacer"></div>
-
-				<SparkProxy.div>
-					<SparkScroll.div
-						className="info-card"
-					  timeline={{
-							topBottom: { marginLeft: '-1000px', opacity: 0  },
-					    topCenter: { marginLeft: '0px', opacity: 1, ease: 'bouncePast' },
-					    bottomCenter: { marginLeft: '0px', opacity: 1, ease: 'bouncePast' },
-					    bottomTop: { marginLeft: '-1000px', opacity: 0 }
-					  }}>
+				{(width < 750) ?
+					<div className="info-card">
 						<Intro language={language} />
-					</SparkScroll.div>
-				</SparkProxy.div>
+					</div>
+					:
+					<SparkProxy.div>
+						<SparkScroll.div
+							className="info-card"
+						  timeline={{
+								topBottom: { marginLeft: '-1000px', opacity: 0  },
+						    topCenter: { marginLeft: '0px', opacity: 1, ease: 'bouncePast' },
+						    bottomCenter: { marginLeft: '0px', opacity: 1, ease: 'bouncePast' },
+						    bottomTop: { marginLeft: '-1000px', opacity: 0 }
+						  }}>
+							<Intro language={language} />
+						</SparkScroll.div>
+					</SparkProxy.div>
+				}
 
-				<div className="spacer"></div>
-
-				<SparkProxy.div>
-					<SparkScroll.div
-						className="info-card"
-						timeline={{
-							topBottom: { marginRight: '-1000px', opacity: 0  },
-							topCenter: { marginRight: '0px', opacity: 1, ease: 'bouncePast' },
-							centerTop: { marginRight: '0px', opacity: 1, ease: 'bouncePast' },
-							bottomTop: { opacity: 0 }
-						}}>
+				{
+					(width < 750) ?
+					<div className="info-card">
 						<Places language={language} setPicture={setPicture} />
-					</SparkScroll.div>
-				</SparkProxy.div>
-
-				<div className="spacer"></div>
-				<div className="spacer"></div>
-
+					</div>
+					:
+					<SparkProxy.div>
+						<SparkScroll.div
+							className="info-card"
+							timeline={{
+								topBottom: { marginRight: '-1000px', opacity: 0  },
+								topCenter: { marginRight: '0px', opacity: 1, ease: 'bouncePast' },
+								centerTop: { marginRight: '0px', opacity: 1, ease: 'bouncePast' },
+								bottomTop: { opacity: 0 }
+							}}>
+							<Places language={language} setPicture={setPicture} />
+						</SparkScroll.div>
+					</SparkProxy.div>	
+				}
 
 				<Image picture={picture} clearPicture={clearPicture} />
 

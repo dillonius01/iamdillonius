@@ -60,42 +60,42 @@ const DumbPlaces = props => {
 			</div>
 
 			<div className="col-12">
-				<div className="inline-block col-12 sm-col sm-col-6 md-col md-col-4">
+				<div className="inline-block col-6 md-col md-col-4">
 					<div className="aspect">
 						<img name="central-park.jpg" className="img-thumbnail" src="public/media/central-park.jpg" onClick={selectPicture} />
 					</div>
 					<h2 className="center">{(language === 'English') ? "New York, NY" : "纽约"}</h2>
 				</div>
 
-				<div className="inline-block col-12 sm-col sm-col-6 md-col md-col-4">
+				<div className="inline-block col-6 md-col md-col-4">
 					<div className="aspect">
 						<img name="scooter.jpg" className="img-thumbnail" src="public/media/scooter.jpg" onClick={selectPicture} />
 					</div>
 					<h2 className="center">{(language === 'English') ? "Beijing, China" : "北京"}</h2>
 				</div>
 
-				<div className="inline-block col-12 sm-col sm-col-6 md-col md-col-4">
+				<div className="inline-block col-6 md-col md-col-4">
 					<div className="aspect">
 						<img name="diamondhead.jpg" className="img-thumbnail" src="public/media/diamondhead.jpg" onClick={selectPicture} />
 					</div>
 					<h2 className="center">{(language === 'English') ? "Honolulu, HI" : "夏威夷"}</h2>
 				</div>
 
-				<div className="inline-block col-12 sm-col sm-col-6 md-col md-col-4">
+				<div className="inline-block col-6 md-col md-col-4">
 					<div className="aspect">
 						<img name="mtauburn.jpg" className="img-thumbnail" src="public/media/mtauburn.jpg" onClick={selectPicture}/>
 					</div>
 					<h2 className="center">{(language === 'English') ? "Cambrdige, MA" : "波士顿"}</h2>
 				</div>
 
-				<div className="inline-block col-12 sm-col sm-col-6 md-col md-col-4">
+				<div className="inline-block col-6 md-col md-col-4">
 					<div className="aspect">
 						<img name="trevi.jpg" className="img-thumbnail" src="public/media/trevi.jpg" onClick={selectPicture}/>
 					</div>
 					<h2 className="center">{(language === 'English') ? "Naples, Italy" : "意大利"}</h2>
 				</div>
 
-				<div className="inline-block col-12 sm-col sm-col-6 md-col md-col-4">
+				<div className="inline-block col-6 md-col md-col-4">
 					<div className="aspect">
 						<img name="seattle.jpg" src="public/media/seattle.jpg" className="img-thumbnail" onClick={selectPicture} />
 					</div>

@@ -46,9 +46,9 @@ button {
 /* FOR SPACING */
 
 .spacer {
-	height: 50vh;
+	height: 35vh;
 
-	@media (max-width: 450px) {
-		height: 75vh;
+	@media (max-width: 750px) {
+		height: 10vh;
 	}
 }

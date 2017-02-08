@@ -17,6 +17,10 @@
 
 .img-jumbo {
 	max-width: 70%;
+
+	@media (max-width: 640px) {
+		max-width: 90%;
+	}
 }
 
 .img-thumbnail {
