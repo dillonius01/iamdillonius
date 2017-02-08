@@ -1,16 +1,4 @@
-/* MEDIA QUERIES AND ANIMATIONS */
-
-@media (max-width: 950px) {
-	body {
-		font-size: 8pt !important;
-	}
-}
-
-@media (max-width: 750px) {
-	body {
-		font-size: 5pt !important;
-	}
-}
+/* ANIMATIONS */
 
 @keyframes fade {
 	0% { color: rgba(0,0,0,0);  }
