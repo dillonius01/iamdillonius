@@ -16,12 +16,55 @@
 	100% { opacity: 0; transform: scale(2.5); }
 }
 
-@keyframes zoom {
+@keyframes zoomOnce {
 	0% { transform: scale(0.2); }
 	100% { transform: scale(1); }
 }
 
+@keyframes spinOnce {
+	100% { transform: rotate(360deg); }
+}
+
+@keyframes wiggleOnce {
+	25% { transform: translate(20px, 0); }
+	75% { transform: translate(-20px, 0); }
+	100% { transform: translate(0, 0); }
+}
+
+@keyframes hopOnce {
+	25% { transform: translate(0, 20px); }
+	75% { transform: translate(0, -20px); }
+	100% { transform: translate(0, 0); }
+}
+
+
+@keyframes zoomToggle {
+	0%, 100% { transform: scale(1); }
+	50% { transform: scale(0.8); }
+}
+
 /* CLASSES */
+
+.hop {
+	animation: hopOnce 0.5s;
+	-webkit-animation: hopOnce 0.5s;
+	-moz-animation: hopOnce 0.5s;
+	-o-animation: hopOnce 0.5s;
+}
+
+.wiggle {
+	animation: wiggleOnce 0.5s;
+	-webkit-animation: wiggleOnce 0.5s;
+	-moz-animation: wiggleOnce 0.5s;
+	-o-animation: wiggleOnce 0.5s;
+}
+
+.spin {
+	animation: spinOnce 0.5s;
+	-webkit-animation: spinOnce 0.5s;
+	-moz-animation: spinOnce 0.5s;
+	-o-animation: spinOnce 0.5s;
+}
 
 .pulse {
 	animation: pulseOnce 0.5s;
@@ -30,10 +73,17 @@
 	-o-animation: pulseOnce 0.5s;
 }
 
+.zoom {
+	animation: zoomToggle 0.5s;
+	-webkit-animation: zoomToggle 0.5s;
+	-moz-animation: zoomToggle 0.5s;
+	-o-animation: zoomToggle 0.5s;
+}
+
 .img-zoom {
-	animation: zoom 0.4s;
-	-webkit-animation: zoom 0.4s;
-	-moz-animation: zoom 0.4s;
-	-o-animation: zoom 0.4s;
+	animation: zoomOnce 0.4s;
+	-webkit-animation: zoomOnce 0.4s;
+	-moz-animation: zoomOnce 0.4s;
+	-o-animation: zoomOnce 0.4s;
 
 }

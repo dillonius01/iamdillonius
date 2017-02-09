@@ -22,13 +22,11 @@ class Technologies extends Component {
 	}
 
 	animationDone(evt) {
-		console.log('animation is done and evt is ', evt);
 		const toReset = `animate${evt.target.name}`;
 		this.setState({[toReset]: false});
 	}
 
 	componentDidMount() {
-		console.log('COMPONENT DID MOUNT AND ICONS ARE', this.icons);
 		this.icons.forEach(icon => icon.addEventListener('animationend', this.animationDone));
 	}
 
@@ -36,10 +34,14 @@ class Technologies extends Component {
 		this.icons.forEach(icon => icon.removeEventListener('animationend', this.animationDone))
 	}
 
+	generateRandomAnimation() {
+		const animations = ['pulse', 'spin', 'wiggle', 'zoom', 'hop'];
+		const randomIndex = Math.floor(Math.random() * animations.length);
+		return animations[randomIndex];
+	}
+
 	handleMouseEvt(evt) {
-		console.log('moused over element!', evt.target);
 		const toAnimate = `animate${evt.target.name}`;
-		console.log('toAnimate is ', toAnimate);
 		this.setState({ [toAnimate]: true });
 	}
 
@@ -55,6 +57,7 @@ class Technologies extends Component {
 			<DumbTechnologies
 				language={language}
 				handleMouseEvt={this.handleMouseEvt}
+				generateRandomAnimation={this.generateRandomAnimation}
 				setIcon={this.setIcon}
 				animate0={animate0}
 				animate1={animate1}
@@ -76,6 +79,7 @@ class Technologies extends Component {
 const DumbTechnologies = props => {
 	const { language,
 					handleMouseEvt,
+					generateRandomAnimation,
 					setIcon,
 					animate0,
 					animate1,
@@ -120,35 +124,35 @@ const DumbTechnologies = props => {
 			<div className="col-12">
 
 				<div className="col-6 md-col md-col-3 inline-block tech-img-container">
-					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="0" ref={ setIcon } className={`tech-img ${animate0 ? 'pulse' : ''}`} src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png" alt=""/>
+					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="0" ref={ setIcon } className={`tech-img ${animate0 ? generateRandomAnimation() : ''}`} src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png" alt=""/>
 				</div>
 
 				<div className="col-6 md-col md-col-3 inline-block tech-img-container">
-					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="1" ref={ setIcon } className={`tech-img ${animate1 ? 'pulse' : ''}`} src="http://daynin.github.io/clojurescript-presentation/img/react-logo.png" alt=""/>
+					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="1" ref={ setIcon } className={`tech-img ${animate1 ? generateRandomAnimation() : ''}`} src="http://daynin.github.io/clojurescript-presentation/img/react-logo.png" alt=""/>
 				</div>
 
 				<div className="col-6 md-col md-col-3 inline-block tech-img-container">
-					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="2" ref={ setIcon } className={`tech-img ${animate2 ? 'pulse' : ''}`} src="https://raw.githubusercontent.com/reactjs/redux/master/logo/logo.png" alt=""/>
+					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="2" ref={ setIcon } className={`tech-img ${animate2 ? generateRandomAnimation() : ''}`} src="https://raw.githubusercontent.com/reactjs/redux/master/logo/logo.png" alt=""/>
 				</div>
 
 				<div className="col-6 md-col md-col-3 inline-block tech-img-container">
-					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="3" ref={ setIcon } className={`tech-img ${animate3 ? 'pulse' : ''}`} src="https://lh3.googleusercontent.com/-whXBCDVxIto/Vz2Rsyz-UjI/AAAAAAAAiJc/UjvR-M2b9tY5SyKFkDY6Q_MbusEINRXkQ/w1024-h1024/Firebase_16-logo.png" alt=""/>
+					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="3" ref={ setIcon } className={`tech-img ${animate3 ? generateRandomAnimation() : ''}`} src="https://lh3.googleusercontent.com/-whXBCDVxIto/Vz2Rsyz-UjI/AAAAAAAAiJc/UjvR-M2b9tY5SyKFkDY6Q_MbusEINRXkQ/w1024-h1024/Firebase_16-logo.png" alt=""/>
 				</div>
 
 				<div className="col-6 md-col md-col-3 inline-block tech-img-container">
-					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="4" ref={ setIcon } className={`tech-img ${animate4 ? 'pulse' : ''}`} src="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png" alt=""/>
+					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="4" ref={ setIcon } className={`tech-img ${animate4 ? generateRandomAnimation() : ''}`} src="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png" alt=""/>
 				</div>
 
 				<div className="col-6 md-col md-col-3 inline-block tech-img-container">
-					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="5" ref={ setIcon } className={`tech-img ${animate5 ? 'pulse' : ''}`} src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1000px-Postgresql_elephant.svg.png" alt=""/>
+					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="5" ref={ setIcon } className={`tech-img ${animate5 ? generateRandomAnimation() : ''}`} src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1000px-Postgresql_elephant.svg.png" alt=""/>
 				</div>
 
 				<div className="col-6 md-col md-col-3 inline-block tech-img-container">
-					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="6" ref={ setIcon } className={`tech-img ${animate6 ? 'pulse' : ''}`} src="http://mean.io/wp-content/themes/twentysixteen-child/images/express.png" alt=""/>
+					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="6" ref={ setIcon } className={`tech-img ${animate6 ? generateRandomAnimation() : ''}`} src="http://mean.io/wp-content/themes/twentysixteen-child/images/express.png" alt=""/>
 				</div>
 
 				<div className="col-6 md-col md-col-3 inline-block tech-img-container">
-					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="7" ref={ setIcon } className={`tech-img ${animate7 ? 'pulse' : ''}`} src="https://onsen.io/blog/content/images/2015/Aug/chaijs-mocha.png" alt=""/>
+					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="7" ref={ setIcon } className={`tech-img ${animate7 ? generateRandomAnimation() : ''}`} src="https://onsen.io/blog/content/images/2015/Aug/chaijs-mocha.png" alt=""/>
 				</div>
 			</div>
 		</div>
