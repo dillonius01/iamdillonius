@@ -119,7 +119,9 @@ class Home extends Component {
 							className="info-card"
 							timeline={{
 								centerBottom: { rotation: '0' },
-								centerCenter: { rotation: '360' }
+								'centerBottom+100': { rotation: '-15'},
+								'centerBottom+200': { rotation: '15' },
+								'centerBottom+300': { rotation: '0', ease: 'easeOutBounce' }
 							}}>
 							<Contact language={language} />
 						</SparkScroll.div>
