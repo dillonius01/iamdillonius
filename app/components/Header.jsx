@@ -10,9 +10,9 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      English: ['developer', 'runner', 'linguist', 'cellist', 'historian', 'singer'],
-      Mandarin: ['黑客', '跑步爱好者', '语言学家', '大提琴手', '历史学家', '歌手'],
-      pointer: 0,
+      English: ['singer', 'developer', 'runner', 'linguist', 'cellist', 'historian'],
+      Mandarin: ['歌手', '黑客', '跑步爱好者', '语言学家', '大提琴手', '历史学家'],
+      pointer: null,
       interval: null,
       pulse: false,
       zoom: false
@@ -24,7 +24,8 @@ class Header extends Component {
 
   }
 
-  componentWillMount() {
+  componentDidMount() {
+    this.langBtn.addEventListener('animationend', this.animationDone);
     this.setState(prevState => {
       if (prevState.interval) {
         clearInterval(prevState.interval);
@@ -35,10 +36,6 @@ class Header extends Component {
     });
   }
 
-  componentDidMount() {
-    this.langBtn.addEventListener('animationend', this.animationDone);
-  }
-
   componentWillUnmount() {
     this.langBtn.removeEventListener('animationend', this.animationDone);
   }
@@ -46,7 +43,7 @@ class Header extends Component {
   changePointer() {
     this.setState(prevState => {
       let adjLen = prevState.English.length - 1;
-      let plusOne = prevState.pointer + 1;
+      let plusOne = prevState.pointer + 1 || 0;
       let pointer = (plusOne > adjLen) ? 0 : plusOne;
       return { pointer };
     });
