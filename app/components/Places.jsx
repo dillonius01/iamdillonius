@@ -62,42 +62,42 @@ const DumbPlaces = props => {
 			<div className="col-12">
 				<div className="inline-block col-6 md-col md-col-4">
 					<div className="aspect">
-						<img name="central-park.jpg" className="img-thumbnail" src="public/media/central-park.jpg" onClick={selectPicture} />
+						<img name="MzWva2M.jpg" className="img-thumbnail" src="http://i.imgur.com/MzWva2M.jpg" onClick={selectPicture} />
 					</div>
 					<h2 className="center">{(language === 'English') ? "New York, NY" : "纽约"}</h2>
 				</div>
 
 				<div className="inline-block col-6 md-col md-col-4">
 					<div className="aspect">
-						<img name="scooter.jpg" className="img-thumbnail" src="public/media/scooter.jpg" onClick={selectPicture} />
+						<img name="TAkDLDM.jpg" className="img-thumbnail" src="http://i.imgur.com/TAkDLDM.jpg" onClick={selectPicture} />
 					</div>
 					<h2 className="center">{(language === 'English') ? "Beijing, China" : "北京"}</h2>
 				</div>
 
 				<div className="inline-block col-6 md-col md-col-4">
 					<div className="aspect">
-						<img name="diamondhead.jpg" className="img-thumbnail" src="public/media/diamondhead.jpg" onClick={selectPicture} />
+						<img name="UILCsnl.jpg" className="img-thumbnail" src="http://i.imgur.com/UILCsnl.jpg" onClick={selectPicture} />
 					</div>
 					<h2 className="center">{(language === 'English') ? "Honolulu, HI" : "夏威夷"}</h2>
 				</div>
 
 				<div className="inline-block col-6 md-col md-col-4">
 					<div className="aspect">
-						<img name="weeks.jpg" className="img-thumbnail" src="public/media/weeks.jpg" onClick={selectPicture}/>
+						<img name="CO2xs17.jpg" className="img-thumbnail" src="http://i.imgur.com/CO2xs17.jpg" onClick={selectPicture}/>
 					</div>
-					<h2 className="center">{(language === 'English') ? "Cambrdige, MA" : "波士顿"}</h2>
+					<h2 className="center">{(language === 'English') ? "Cambridge, MA" : "波士顿"}</h2>
 				</div>
 
 				<div className="inline-block col-6 md-col md-col-4">
 					<div className="aspect">
-						<img name="trevi.jpg" className="img-thumbnail" src="public/media/trevi.jpg" onClick={selectPicture}/>
+						<img name="dJnY8na.jpg" className="img-thumbnail" src="http://i.imgur.com/dJnY8na.jpg" onClick={selectPicture}/>
 					</div>
 					<h2 className="center">{(language === 'English') ? "Naples, Italy" : "意大利"}</h2>
 				</div>
 
 				<div className="inline-block col-6 md-col md-col-4">
 					<div className="aspect">
-						<img name="seattle.jpg" src="public/media/seattle.jpg" className="img-thumbnail" onClick={selectPicture} />
+						<img name="tZ9ovtX.jpg" src="http://i.imgur.com/tZ9ovtX.jpg" className="img-thumbnail" onClick={selectPicture} />
 					</div>
 					<h2 className="center">{(language === 'English') ? "Seattle, WA" : "西雅图"}</h2>
 				</div>
