@@ -48,7 +48,7 @@ const WeJay = ({ language }) => (
 			</div>
 			<div className="col-4 link-container">
 				<a target="_blank" href="http://wejay.me">
-					<img className="img-title" src="/public/logos/wejay.png"></img>
+					<img className="img-title" src="public/logos/wejay.png"></img>
 				</a>
 			</div>
 			<div className="col-4 link-container">

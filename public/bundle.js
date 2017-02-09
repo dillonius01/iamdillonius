@@ -46832,7 +46832,7 @@
 					_react2.default.createElement(
 						"a",
 						{ target: "_blank", href: "http://wejay.me" },
-						_react2.default.createElement("img", { className: "img-title", src: "/public/logos/wejay.png" })
+						_react2.default.createElement("img", { className: "img-title", src: "public/logos/wejay.png" })
 					)
 				),
 				_react2.default.createElement(
@@ -47342,7 +47342,7 @@
 					{ className: "col-12 link-container inline-block" },
 					_react2.default.createElement(
 						"a",
-						{ target: "_blank", href: "/public/media/Powers_Dillon_resume.pdf", className: "center", download: true },
+						{ target: "_blank", href: "public/media/Powers_Dillon_resume.pdf", className: "center", download: true },
 						_react2.default.createElement("i", { className: "zmdi zmdi-download zmdi-hc-2x" })
 					)
 				)

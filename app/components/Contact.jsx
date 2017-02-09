@@ -49,7 +49,7 @@ const Contact = ({ language }) => (
 			</h2>
 
 			<div className="col-12 link-container inline-block">
-				<a target="_blank" href="/public/media/Powers_Dillon_resume.pdf" className="center" download>
+				<a target="_blank" href="public/media/Powers_Dillon_resume.pdf" className="center" download>
 					<i className="zmdi zmdi-download zmdi-hc-2x"></i>
 				</a>
 			</div>
