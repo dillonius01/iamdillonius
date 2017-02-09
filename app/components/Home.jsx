@@ -67,33 +67,65 @@ class Home extends Component {
 					</SparkProxy.div>
 				}
 
+				{(width < 750) ?
+					<div className="info-card">
+						<Technologies language={language} />
+					</div>
+					:
+					<SparkProxy.div>
+						<SparkScroll.div
+							className="info-card"
+						  timeline={{
+								topBottom: { marginRight: '-1000px', opacity: 0  },
+								topCenter: { marginRight: '0px', opacity: 1, ease: 'bouncePast' },
+								bottomCenter: { marginRight: '0px', opacity: 1, ease: 'bouncePast' },
+								bottomTop: { marginRight: '-1000px', opacity: 0 }
+						  }}>
+							<Technologies language={language} />
+						</SparkScroll.div>
+					</SparkProxy.div>
+				}
+
 				{
 					(width < 750) ?
 					<div className="info-card">
 						<Places language={language} setPicture={setPicture} />
 					</div>
 					:
-					<SparkProxy.div>
+					<SparkProxy.div proxyId="scale-proxy">
 						<SparkScroll.div
+							proxy="scale-proxy"
 							className="info-card"
 							timeline={{
-								topBottom: { marginRight: '-1000px', opacity: 0  },
-								topCenter: { marginRight: '0px', opacity: 1, ease: 'bouncePast' },
-								bottomCenter: { marginRight: '0px', opacity: 1, ease: 'bouncePast' },
-								bottomTop: { marginRight: '-1000px', opacity: 0 }
+								topBottom: { scale: 0, opacity: 0 },
+								topCenter: { scale: 1, opacity: 1 },
+								centerTop: { scale: 1, opacity: 1 },
+								bottomTop: { scale: 0, opacity: 0 }
 							}}>
 							<Places language={language} setPicture={setPicture} />
 						</SparkScroll.div>
-					</SparkProxy.div>	
+					</SparkProxy.div>
 				}
-				
-				<div className="info-card">
-					<Technologies language={language} />
-				</div>
 
-				<div className="info-card">
-					<Contact language={language} />
-				</div>
+				{
+					(width < 750) ?
+					<div className="info-card">
+						<Contact language={language} />
+					</div>
+					:
+					<SparkProxy.div proxyId="rotate-proxy">
+						<SparkScroll.div
+							proxy="rotate-proxy"
+							className="info-card"
+							timeline={{
+								centerBottom: { rotation: '0' },
+								centerCenter: { rotation: '360' }
+							}}>
+							<Contact language={language} />
+						</SparkScroll.div>
+					</SparkProxy.div>
+				}
+
 
 				<Disclaimer language={language} />
 
