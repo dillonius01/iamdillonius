@@ -8,7 +8,7 @@ import Home from './components/Home';
 
 export default () => (
   <Router history={browserHistory}>
-    <Route path="/iamdillonius/" component={App}>
+    <Route path="/iamdillonius" component={App}>
       <IndexRoute component={Home} />
     </Route>
   </Router>
