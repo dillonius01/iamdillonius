@@ -7,6 +7,7 @@ import Intro from './Intro';
 import Places from './Places';
 import Image from './Image';
 import Contact from './Contact';
+import Technologies from './Technologies';
 import Disclaimer from './Disclaimer';
 
 import { setPicture, clearPicture } from '../ducks/picture';
@@ -86,7 +87,9 @@ class Home extends Component {
 					</SparkProxy.div>	
 				}
 				
-				<div className="spacer"></div>
+				<div className="info-card">
+					<Technologies language={language} />
+				</div>
 
 				<div className="info-card">
 					<Contact language={language} />
