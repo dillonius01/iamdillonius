@@ -95,6 +95,16 @@
 		display: block;
 		margin: 0 auto;
 	}
+
+	#img-ratmap {
+		width: 20%;
+		margin: 0 auto;
+		display: block;
+
+		@media (max-width: 750px) {
+			width: 30%;
+		}
+	}
 }
 
 .project-bullets {

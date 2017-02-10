@@ -42,13 +42,20 @@ const RatMap = ({ language }) => (
 		</div>
 
 		<div className="col-12 center-vert">
-			<div className="col-6 link-container">
+
+			<div className="col-4 link-container">
 				<a target="_blank" href="https://github.com/dillonius01/ratmap">
 					<i className="zmdi zmdi-github zmdi-hc-2x"></i>
 				</a>
 			</div>
 
-			<div className="col-6 link-container">
+			<div className="col-4 link-container">
+				<a target="_blank" href="http://ratmap.herokuapp.com">
+					<img id="img-ratmap" src="/public/logos/icon-rat.png"></img>
+				</a>
+			</div>
+
+			<div className="col-4 link-container">
 				<a target="_blank" href="https://www.youtube.com/watch?v=eCVuL15I0G4">
 					<i className="zmdi zmdi-youtube-play zmdi-hc-2x"></i>
 				</a>
