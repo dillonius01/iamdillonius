@@ -5307,6 +5307,13 @@ button {
     width: 80%;
     display: block;
     margin: 0 auto; }
+  .link-container #img-ratmap {
+    width: 20%;
+    margin: 0 auto;
+    display: block; }
+    @media (max-width: 750px) {
+      .link-container #img-ratmap {
+        width: 30%; } }
 
 .project-bullets li {
   margin-bottom: .5em; }

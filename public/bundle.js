@@ -46933,7 +46933,7 @@
 				{ className: "col-12 center-vert" },
 				_react2.default.createElement(
 					"div",
-					{ className: "col-6 link-container" },
+					{ className: "col-4 link-container" },
 					_react2.default.createElement(
 						"a",
 						{ target: "_blank", href: "https://github.com/dillonius01/ratmap" },
@@ -46942,7 +46942,16 @@
 				),
 				_react2.default.createElement(
 					"div",
-					{ className: "col-6 link-container" },
+					{ className: "col-4 link-container" },
+					_react2.default.createElement(
+						"a",
+						{ target: "_blank", href: "http://ratmap.herokuapp.com" },
+						_react2.default.createElement("img", { id: "img-ratmap", src: "/public/logos/icon-rat.png" })
+					)
+				),
+				_react2.default.createElement(
+					"div",
+					{ className: "col-4 link-container" },
 					_react2.default.createElement(
 						"a",
 						{ target: "_blank", href: "https://www.youtube.com/watch?v=eCVuL15I0G4" },
