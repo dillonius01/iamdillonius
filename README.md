@@ -1,7 +1,8 @@
 # I am Dillonius
 
 ## About
-A static site to show the world a bit about my coding abilities
+A static site to show the world a bit about my coding abilities.
+You can see the site live at <a href="http://dillonius.com">dillonius.com</a>
 
 ## Thought Process
 #### Front-End
