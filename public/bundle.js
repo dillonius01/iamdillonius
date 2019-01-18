@@ -46669,7 +46669,7 @@
 				_react2.default.createElement(
 					'h2',
 					{ className: 'txt-center txt-intro' },
-					language === 'English' ? "Among other things, I am a web developer" : "我有不同身份，其中一个是软件工程师"
+					language === 'English' ? "Among other things, I am a software engineer" : "我有不同身份，其中一个是软件工程师"
 				),
 				_react2.default.createElement(
 					'h2',
@@ -47570,7 +47570,7 @@
 				_react2.default.createElement(
 					'div',
 					{ className: 'col-6 md-col md-col-3 inline-block tech-img-container' },
-					_react2.default.createElement('img', { onClick: handleMouseEvt, onMouseOver: handleMouseEvt, name: '6', ref: setIcon, className: 'tech-img ' + (animate6 ? generateRandomAnimation() : ''), src: 'http://mean.io/wp-content/themes/twentysixteen-child/images/express.png', alt: '' })
+					_react2.default.createElement('img', { onClick: handleMouseEvt, onMouseOver: handleMouseEvt, name: '6', ref: setIcon, className: 'tech-img ' + (animate6 ? generateRandomAnimation() : ''), src: 'https://ourcodeworld.com/public-media/gallery/categorielogo-5713d627ccabf.png', alt: '' })
 				),
 				_react2.default.createElement(
 					'div',
@@ -47610,7 +47610,7 @@
 			_react2.default.createElement(
 				"h3",
 				{ className: "center m0" },
-				"\xA9 2017 iamdillonius"
+				"\xA9 2019 iamdillonius"
 			),
 			language === 'English' ? _react2.default.createElement(
 				"h3",

@@ -148,7 +148,7 @@ const DumbTechnologies = props => {
 				</div>
 
 				<div className="col-6 md-col md-col-3 inline-block tech-img-container">
-					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="6" ref={ setIcon } className={`tech-img ${animate6 ? generateRandomAnimation() : ''}`} src="http://mean.io/wp-content/themes/twentysixteen-child/images/express.png" alt=""/>
+					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="6" ref={ setIcon } className={`tech-img ${animate6 ? generateRandomAnimation() : ''}`} src="https://ourcodeworld.com/public-media/gallery/categorielogo-5713d627ccabf.png" alt=""/>
 				</div>
 
 				<div className="col-6 md-col md-col-3 inline-block tech-img-container">
