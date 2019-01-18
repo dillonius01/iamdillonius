@@ -56,7 +56,7 @@ const DumbIntro = props => {
 				</h2>
 				<h2 className="txt-center txt-intro">
 					{ (language === 'English') ?
-						"Among other things, I am a web developer" :
+						"Among other things, I am a software engineer" :
 						"我有不同身份，其中一个是软件工程师"
 					}
 				</h2>
