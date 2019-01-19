@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import WeJay from './WeJay';
-import RatMap from './RatMap';
-import NewsMirror from './NewsMirror';
+import Project from './Project';
+import RatMapData from '../props/RatMapData';
+import WeJayData from '../props/WeJayData';
+import NewsMirrorData from '../props/NewsMirrorData';
+import IntroData from '../props/IntroData';
+
 
 
 /* -----------------    STATEFUL REACT COMPONENT     ------------------ */
@@ -36,34 +39,36 @@ class Intro extends Component {
 			/>
 		)
 	}
-
-
-
 }
+
+
 
 /* -----------------    PRESENTATIONAL COMPONENT     ------------------ */
 
+
+
 const DumbIntro = props => {
 	const { language, project, handleSelectProject, idx } = props;
+
 	return(
 		<div className="clearfix card-container">
 			<div className="col-12">
 				<h2 className="txt-center txt-intro name">
 					{ (language === 'English') ?
-						"Hi, my name is Dillon" :
-						"你好，我名字叫彭郎"
+						IntroData[0].english :
+						IntroData[0].chinese
 					}
 				</h2>
 				<h2 className="txt-center txt-intro">
 					{ (language === 'English') ?
-						"Among other things, I am a software engineer" :
-						"我有不同身份，其中一个是软件工程师"
+						IntroData[1].english :
+						IntroData[1].chinese
 					}
 				</h2>
 				<h2 className="txt-center txt-intro">
 				{ (language === 'English') ?
-					"Here are some cool projects I built" :
-					"看看我做过的酷毙项目"
+						IntroData[2].english :
+						IntroData[2].chinese
 				}
 				</h2>
 			</div>
@@ -75,7 +80,7 @@ const DumbIntro = props => {
 						name="wejay"
 						value={0}
 						onClick={handleSelectProject}>
-						{(language === 'English') ? "weJay" : "微贼"}
+						{(language === 'English') ? WeJayData.title.english : WeJayData.title.chinese }
 					</button>
 				</div>
 				<div className="col-4 inline-block">
@@ -83,7 +88,7 @@ const DumbIntro = props => {
 						name="ratmap"
 						value={1}
 						onClick={handleSelectProject}>
-						{(language === 'English') ? "RatMap" : "鼠图"}
+						{(language === 'English') ? RatMapData.title.english : RatMapData.title.chinese }
 					</button>
 				</div>
 				<div className="col-4 inline-block">
@@ -92,7 +97,7 @@ const DumbIntro = props => {
 						name="newsmirror"
 						value={2}
 						onClick={handleSelectProject}>
-						{(language === 'English') ? "News Mirror" : "镜子新闻"}
+						{(language === 'English') ? NewsMirrorData.title.english : NewsMirrorData.title.chinese }
 					</button>
 				</div>
 			</div>
@@ -103,27 +108,24 @@ const DumbIntro = props => {
 			<div className="col-12">
 				{
 					(project === 'wejay') ?
-					<WeJay language={language} />
+					<Project language={language} projectData={WeJayData} />
 					:
 					null
 
 				}
-
 				{
 					(project === 'ratmap') ?
-					<RatMap language={language} />
+					<Project language={language} projectData={RatMapData} />
 					:
 					null
 				}
 				{
 					(project === 'newsmirror') ?
-					<NewsMirror language={language} />
+					<Project language={language} projectData={NewsMirrorData} />
 					:
 					null
 				}
 			</div>
-
-
 		</div>
 	)
 }
