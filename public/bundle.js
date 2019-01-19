@@ -46590,9 +46590,25 @@
 	
 	var _RatMap2 = _interopRequireDefault(_RatMap);
 	
+	var _Project = __webpack_require__(257);
+	
+	var _Project2 = _interopRequireDefault(_Project);
+	
 	var _NewsMirror = __webpack_require__(251);
 	
 	var _NewsMirror2 = _interopRequireDefault(_NewsMirror);
+	
+	var _BilingualText = __webpack_require__(258);
+	
+	var _BilingualText2 = _interopRequireDefault(_BilingualText);
+	
+	var _ProjectData = __webpack_require__(259);
+	
+	var _ProjectData2 = _interopRequireDefault(_ProjectData);
+	
+	var _Link = __webpack_require__(261);
+	
+	var _Link2 = _interopRequireDefault(_Link);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -46655,6 +46671,9 @@
 		    handleSelectProject = props.handleSelectProject,
 		    idx = props.idx;
 	
+	
+		var ratmapData = new _ProjectData2.default(new _BilingualText2.default("RatMap", "鼠图"), new _BilingualText2.default("Experience the real New York City", "体验地道的纽约"), [new _BilingualText2.default("Visualization for NYC Open Data's rat infestation inspections", "他妈太多老鼠, 卧槽看看有多少"), new _BilingualText2.default("Users can filter by borough or location and calculate likelihood of infestation", "用户可以通过地区或地址计算老鼠侵扰的盖然性"), new _BilingualText2.default("Built using React, Redux, Socrata Web API, and Google Maps API", "使用的工具包括React, Redux, Socrata联网API, 与谷歌地图API")], [new _Link2.default(false, "https://github.com/dillonius01/ratmap", "zmdi zmdi-github zmdi-hc-2x"), new _Link2.default(true, "http://ratmap.herokuapp.com", "/public/logos/icon-rat.png"), new _Link2.default(false, "https://www.youtube.com/watch?v=eCVuL15I0G4", "zmdi zmdi-youtube-play zmdi-hc-2x")]);
+	
 		return _react2.default.createElement(
 			'div',
 			{ className: 'clearfix card-container' },
@@ -46702,7 +46721,7 @@
 							name: 'ratmap',
 							value: 1,
 							onClick: handleSelectProject },
-						language === 'English' ? "RatMap" : "鼠图"
+						language === 'English' ? ratmapData.title.english : ratmapData.title.chinese
 					)
 				),
 				_react2.default.createElement(
@@ -46728,7 +46747,7 @@
 				'div',
 				{ className: 'col-12' },
 				project === 'wejay' ? _react2.default.createElement(_WeJay2.default, { language: language }) : null,
-				project === 'ratmap' ? _react2.default.createElement(_RatMap2.default, { language: language }) : null,
+				project === 'ratmap' ? _react2.default.createElement(_Project2.default, { language: language, projectData: ratmapData }) : null,
 				project === 'newsmirror' ? _react2.default.createElement(_NewsMirror2.default, { language: language }) : null
 			)
 		);
@@ -47634,6 +47653,219 @@
 	};
 	
 	exports.default = Disclaimer;
+
+/***/ },
+/* 257 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _LinkList = __webpack_require__(260);
+	
+	var _LinkList2 = _interopRequireDefault(_LinkList);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	/* -----------------    PRESENTATIONAL COMPONENT     ------------------ */
+	
+	var Project = function Project(_ref) {
+		var language = _ref.language,
+		    projectData = _ref.projectData;
+		return _react2.default.createElement(
+			'div',
+			{ className: 'card-container clearfix' },
+			_react2.default.createElement(
+				'div',
+				{ className: 'col-12 card-title' },
+				_react2.default.createElement(
+					'h3',
+					{ className: 'subtitle' },
+					language === 'English' ? projectData.title.english : projectData.title.chinese
+				),
+				_react2.default.createElement(
+					'h5',
+					{ className: 'subtitle' },
+					language === 'English' ? projectData.subtitle.english : projectData.subtitle.chinese
+				)
+			),
+			_react2.default.createElement(
+				'div',
+				{ className: 'col-12' },
+				_react2.default.createElement(
+					'ul',
+					{ className: 'project-bullets' },
+					language === 'English' ? projectData.bullets.map(function (b) {
+						return _react2.default.createElement(
+							'li',
+							null,
+							'' + b.english
+						);
+					}) : projectData.bullets.map(function (b) {
+						return _react2.default.createElement(
+							'li',
+							null,
+							'' + b.chinese
+						);
+					})
+				)
+			),
+			_react2.default.createElement(_LinkList2.default, { links: projectData.links })
+		);
+	};
+	
+	exports.default = Project;
+
+/***/ },
+/* 258 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var BilingualText = function BilingualText(english, chinese) {
+		_classCallCheck(this, BilingualText);
+	
+		this.english = english;
+		this.chinese = chinese;
+	};
+	
+	exports.default = BilingualText;
+
+/***/ },
+/* 259 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var ProjectData = function ProjectData(title, subtitle, bullets, links) {
+		_classCallCheck(this, ProjectData);
+	
+		this.title = title;
+		this.subtitle = subtitle;
+		this.bullets = bullets;
+		this.links = links;
+	};
+	
+	exports.default = ProjectData;
+
+/***/ },
+/* 260 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _Link = __webpack_require__(262);
+	
+	var _Link2 = _interopRequireDefault(_Link);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var LinkList = function LinkList(_ref) {
+		var links = _ref.links;
+	
+		var colSize = 12 / links.length;
+	
+		var linkComponents = links.map(function (l) {
+			return _react2.default.createElement(
+				'div',
+				null,
+				'hello world!'
+			);
+		});
+	
+		return;
+		_react2.default.createElement(
+			'div',
+			{ className: 'col-12 center-vert' },
+			linkComponents
+		);
+	};
+	
+	// {
+	// 		 	links.map(l => <Link colSize={colSize} linkData={l} />)
+	// 		}
+	exports.default = LinkList;
+
+/***/ },
+/* 261 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var Link = function Link(isImage, target, source) {
+		_classCallCheck(this, Link);
+	
+		this.isImage = isImage;
+		this.target = target;
+		this.source = source;
+	};
+	
+	exports.default = Link;
+
+/***/ },
+/* 262 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	var Link = function Link(_ref) {
+		var colSize = _ref.colSize,
+		    linkData = _ref.linkData;
+		return React.createElement(
+			"div",
+			{ className: "col-" + colSize + " link-container" },
+			"hello world!"
+		);
+	};
+	
+	exports.default = Link;
+	
+	// {
+	// 	linkData.isImage ?
+	// 	<a target="_blank" href={linkData.target}>
+	// 		<img id="img-ratmap" src={linkData.source}></img>
+	// 	</a>
+	// 	:
+	// 	<a target="_blank" href={linkData.target}>
+	// 		<i className={linkData.source}></i>
+	// 	</a>
+	// }
 
 /***/ }
 /******/ ]);
