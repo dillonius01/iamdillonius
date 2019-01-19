@@ -25608,23 +25608,23 @@
 	
 	var _Intro2 = _interopRequireDefault(_Intro);
 	
-	var _Places = __webpack_require__(377);
+	var _Places = __webpack_require__(378);
 	
 	var _Places2 = _interopRequireDefault(_Places);
 	
-	var _Image = __webpack_require__(378);
+	var _Image = __webpack_require__(379);
 	
 	var _Image2 = _interopRequireDefault(_Image);
 	
-	var _Contact = __webpack_require__(379);
+	var _Contact = __webpack_require__(380);
 	
 	var _Contact2 = _interopRequireDefault(_Contact);
 	
-	var _Technologies = __webpack_require__(380);
+	var _Technologies = __webpack_require__(381);
 	
 	var _Technologies2 = _interopRequireDefault(_Technologies);
 	
-	var _Disclaimer = __webpack_require__(381);
+	var _Disclaimer = __webpack_require__(382);
 	
 	var _Disclaimer2 = _interopRequireDefault(_Disclaimer);
 	
@@ -55902,23 +55902,23 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Project = __webpack_require__(370);
+	var _Project = __webpack_require__(368);
 	
 	var _Project2 = _interopRequireDefault(_Project);
 	
-	var _RatMapData = __webpack_require__(382);
+	var _RatMapData = __webpack_require__(371);
 	
 	var _RatMapData2 = _interopRequireDefault(_RatMapData);
 	
-	var _WeJayData = __webpack_require__(383);
+	var _WeJayData = __webpack_require__(375);
 	
 	var _WeJayData2 = _interopRequireDefault(_WeJayData);
 	
-	var _NewsMirrorData = __webpack_require__(385);
+	var _NewsMirrorData = __webpack_require__(376);
 	
 	var _NewsMirrorData2 = _interopRequireDefault(_NewsMirrorData);
 	
-	var _IntroData = __webpack_require__(384);
+	var _IntroData = __webpack_require__(377);
 	
 	var _IntroData2 = _interopRequireDefault(_IntroData);
 	
@@ -56066,9 +56066,7 @@
 	exports.default = Intro;
 
 /***/ }),
-/* 368 */,
-/* 369 */,
-/* 370 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56081,7 +56079,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _LinkList = __webpack_require__(371);
+	var _LinkList = __webpack_require__(369);
 	
 	var _LinkList2 = _interopRequireDefault(_LinkList);
 	
@@ -56137,7 +56135,7 @@
 	exports.default = Project;
 
 /***/ }),
-/* 371 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56150,7 +56148,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Link = __webpack_require__(372);
+	var _Link = __webpack_require__(370);
 	
 	var _Link2 = _interopRequireDefault(_Link);
 	
@@ -56173,7 +56171,7 @@
 	exports.default = LinkList;
 
 /***/ }),
-/* 372 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -56209,8 +56207,35 @@
 	exports.default = Link;
 
 /***/ }),
-/* 373 */,
-/* 374 */
+/* 371 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _BilingualText = __webpack_require__(372);
+	
+	var _BilingualText2 = _interopRequireDefault(_BilingualText);
+	
+	var _ProjectData = __webpack_require__(373);
+	
+	var _ProjectData2 = _interopRequireDefault(_ProjectData);
+	
+	var _Link = __webpack_require__(374);
+	
+	var _Link2 = _interopRequireDefault(_Link);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var RatMapData = new _ProjectData2.default(new _BilingualText2.default("RatMap", "鼠图"), new _BilingualText2.default("Experience the real New York City", "体验地道的纽约"), [new _BilingualText2.default("Visualization for NYC Open Data's rat infestation inspections", "他妈太多老鼠, 卧槽看看有多少"), new _BilingualText2.default("Users can filter by borough or location and calculate likelihood of infestation", "用户可以通过地区或地址计算老鼠侵扰的盖然性"), new _BilingualText2.default("Built using React, Redux, Socrata Web API, and Google Maps API", "使用的工具包括React, Redux, Socrata联网API, 与谷歌地图API")], [new _Link2.default(false, "https://github.com/dillonius01/ratmap", "zmdi zmdi-github zmdi-hc-2x"), new _Link2.default(true, "http://ratmap.herokuapp.com", "/public/logos/icon-rat.png", "img-ratmap"), new _Link2.default(false, "https://www.youtube.com/watch?v=eCVuL15I0G4", "zmdi zmdi-youtube-play zmdi-hc-2x")]);
+	
+	exports.default = RatMapData;
+
+/***/ }),
+/* 372 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -56231,7 +56256,7 @@
 	exports.default = BilingualText;
 
 /***/ }),
-/* 375 */
+/* 373 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -56254,7 +56279,7 @@
 	exports.default = ProjectData;
 
 /***/ }),
-/* 376 */
+/* 374 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -56277,7 +56302,83 @@
 	exports.default = Link;
 
 /***/ }),
+/* 375 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _BilingualText = __webpack_require__(372);
+	
+	var _BilingualText2 = _interopRequireDefault(_BilingualText);
+	
+	var _ProjectData = __webpack_require__(373);
+	
+	var _ProjectData2 = _interopRequireDefault(_ProjectData);
+	
+	var _Link = __webpack_require__(374);
+	
+	var _Link2 = _interopRequireDefault(_Link);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var WeJayData = new _ProjectData2.default(new _BilingualText2.default("weJay", "微贼"), new _BilingualText2.default("Everyone's a DJ", "连你也可以当DJ"), [new _BilingualText2.default("Collaborative DJ web app that lets party-goers democratically choose what songs plays next", "与朋友们携手创造播放列表"), new _BilingualText2.default("Users suggest songs from Soundcloud, upvote songs they like, and earn DJ points for popular choices", "用户通过Soundcloud寻找并点赞喜欢的歌曲，因此可以积累DJ分"), new _BilingualText2.default("Built using React, Redux, and Firebase", "使用的工具包括React, Redux, 与谷歌Firebase")], [new _Link2.default(false, "https://github.com/christophermanahan/wejay", "zmdi zmdi-github zmdi-hc-2x"), new _Link2.default(true, "http://wejay.herokuapp.com", "public/logos/wejay.png", "img-wejay"), new _Link2.default(false, "https://www.youtube.com/watch?v=-XEOkNGz8m0", "zmdi zmdi-youtube-play zmdi-hc-2x")]);
+	
+	exports.default = WeJayData;
+
+/***/ }),
+/* 376 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _BilingualText = __webpack_require__(372);
+	
+	var _BilingualText2 = _interopRequireDefault(_BilingualText);
+	
+	var _ProjectData = __webpack_require__(373);
+	
+	var _ProjectData2 = _interopRequireDefault(_ProjectData);
+	
+	var _Link = __webpack_require__(374);
+	
+	var _Link2 = _interopRequireDefault(_Link);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var NewsMirrorData = new _ProjectData2.default(new _BilingualText2.default("News Mirror", "镜子新闻"), new _BilingualText2.default("Updates from the other side", "双面之信息"), [new _BilingualText2.default("Chrome extension that generates suggestions for related news articles from different political opinions", "寻找有不同政治观念的新闻"), new _BilingualText2.default("Generates suggestions based on the current page content and analysis of the site's political leanings", "分析网址之后，应用通过智能科技推荐类似的新闻"), new _BilingualText2.default("Built using nothing but sweet, sweet JavaScript", "简单就是魅力：此项目只用了一点纯净的JavaScript我就开心了")], [new _Link2.default(false, "https://github.com/harryttd/news-mirror", "zmdi zmdi-github zmdi-hc-2x")]);
+	
+	exports.default = NewsMirrorData;
+
+/***/ }),
 /* 377 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _BilingualText = __webpack_require__(372);
+	
+	var _BilingualText2 = _interopRequireDefault(_BilingualText);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var IntroData = [new _BilingualText2.default("Hi, my name is Dillon", "你好，我名字叫彭郎"), new _BilingualText2.default("Among other things, I am a software engineer", "我有不同身份，其中一个是软件工程师"), new _BilingualText2.default("Here are some cool projects I built", "看看我做过的酷毙项目")];
+	
+	exports.default = IntroData;
+
+/***/ }),
+/* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -56459,7 +56560,7 @@
 	exports.default = Places;
 
 /***/ }),
-/* 378 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56491,7 +56592,7 @@
 	exports.default = DumbImage;
 
 /***/ }),
-/* 379 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -56578,7 +56679,7 @@
 	exports.default = Contact;
 
 /***/ }),
-/* 380 */
+/* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56803,7 +56904,7 @@
 	exports.default = Technologies;
 
 /***/ }),
-/* 381 */
+/* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -56856,110 +56957,6 @@
 	};
 	
 	exports.default = Disclaimer;
-
-/***/ }),
-/* 382 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _BilingualText = __webpack_require__(374);
-	
-	var _BilingualText2 = _interopRequireDefault(_BilingualText);
-	
-	var _ProjectData = __webpack_require__(375);
-	
-	var _ProjectData2 = _interopRequireDefault(_ProjectData);
-	
-	var _Link = __webpack_require__(376);
-	
-	var _Link2 = _interopRequireDefault(_Link);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var RatMapData = new _ProjectData2.default(new _BilingualText2.default("RatMap", "鼠图"), new _BilingualText2.default("Experience the real New York City", "体验地道的纽约"), [new _BilingualText2.default("Visualization for NYC Open Data's rat infestation inspections", "他妈太多老鼠, 卧槽看看有多少"), new _BilingualText2.default("Users can filter by borough or location and calculate likelihood of infestation", "用户可以通过地区或地址计算老鼠侵扰的盖然性"), new _BilingualText2.default("Built using React, Redux, Socrata Web API, and Google Maps API", "使用的工具包括React, Redux, Socrata联网API, 与谷歌地图API")], [new _Link2.default(false, "https://github.com/dillonius01/ratmap", "zmdi zmdi-github zmdi-hc-2x"), new _Link2.default(true, "http://ratmap.herokuapp.com", "/public/logos/icon-rat.png", "img-ratmap"), new _Link2.default(false, "https://www.youtube.com/watch?v=eCVuL15I0G4", "zmdi zmdi-youtube-play zmdi-hc-2x")]);
-	
-	exports.default = RatMapData;
-
-/***/ }),
-/* 383 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _BilingualText = __webpack_require__(374);
-	
-	var _BilingualText2 = _interopRequireDefault(_BilingualText);
-	
-	var _ProjectData = __webpack_require__(375);
-	
-	var _ProjectData2 = _interopRequireDefault(_ProjectData);
-	
-	var _Link = __webpack_require__(376);
-	
-	var _Link2 = _interopRequireDefault(_Link);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var WeJayData = new _ProjectData2.default(new _BilingualText2.default("weJay", "微贼"), new _BilingualText2.default("Everyone's a DJ", "连你也可以当DJ"), [new _BilingualText2.default("Collaborative DJ web app that lets party-goers democratically choose what songs plays next", "与朋友们携手创造播放列表"), new _BilingualText2.default("Users suggest songs from Soundcloud, upvote songs they like, and earn DJ points for popular choices", "用户通过Soundcloud寻找并点赞喜欢的歌曲，因此可以积累DJ分"), new _BilingualText2.default("Built using React, Redux, and Firebase", "使用的工具包括React, Redux, 与谷歌Firebase")], [new _Link2.default(false, "https://github.com/christophermanahan/wejay", "zmdi zmdi-github zmdi-hc-2x"), new _Link2.default(true, "http://wejay.me", "public/logos/wejay.png", "img-wejay"), new _Link2.default(false, "https://www.youtube.com/watch?v=-XEOkNGz8m0", "zmdi zmdi-youtube-play zmdi-hc-2x")]);
-	
-	exports.default = WeJayData;
-
-/***/ }),
-/* 384 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _BilingualText = __webpack_require__(374);
-	
-	var _BilingualText2 = _interopRequireDefault(_BilingualText);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var IntroData = [new _BilingualText2.default("Hi, my name is Dillon", "你好，我名字叫彭郎"), new _BilingualText2.default("Among other things, I am a software engineer", "我有不同身份，其中一个是软件工程师"), new _BilingualText2.default("Here are some cool projects I built", "看看我做过的酷毙项目")];
-	
-	exports.default = IntroData;
-
-/***/ }),
-/* 385 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _BilingualText = __webpack_require__(374);
-	
-	var _BilingualText2 = _interopRequireDefault(_BilingualText);
-	
-	var _ProjectData = __webpack_require__(375);
-	
-	var _ProjectData2 = _interopRequireDefault(_ProjectData);
-	
-	var _Link = __webpack_require__(376);
-	
-	var _Link2 = _interopRequireDefault(_Link);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var NewsMirrorData = new _ProjectData2.default(new _BilingualText2.default("News Mirror", "镜子新闻"), new _BilingualText2.default("Updates from the other side", "双面之信息"), [new _BilingualText2.default("Chrome extension that generates suggestions for related news articles from different political opinions", "寻找有不同政治观念的新闻"), new _BilingualText2.default("Generates suggestions based on the current page content and analysis of the site's political leanings", "分析网址之后，应用通过智能科技推荐类似的新闻"), new _BilingualText2.default("Built using nothing but sweet, sweet JavaScript", "简单就是魅力：此项目只用了一点纯净的JavaScript我就开心了")], [new _Link2.default(false, "https://github.com/harryttd/news-mirror", "zmdi zmdi-github zmdi-hc-2x")]);
-	
-	exports.default = NewsMirrorData;
 
 /***/ })
 /******/ ]);

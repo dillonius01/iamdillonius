@@ -14,7 +14,7 @@ const WeJayData =
 		],
 		[
 			new Link(false, "https://github.com/christophermanahan/wejay", "zmdi zmdi-github zmdi-hc-2x"),
-			new Link(true, "http://wejay.me", "public/logos/wejay.png", "img-wejay"),
+			new Link(true, "http://wejay.herokuapp.com", "public/logos/wejay.png", "img-wejay"),
 			new Link(false, "https://www.youtube.com/watch?v=-XEOkNGz8m0", "zmdi zmdi-youtube-play zmdi-hc-2x"),
 		]);
 
