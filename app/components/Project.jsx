@@ -21,8 +21,8 @@ const Project = ({ language, projectData }) => (
 		<div className="col-12">
 			<ul className="project-bullets">
 				{ (language === 'English') ?
-						projectData.bullets.map(b => <li>{`${b.english}`}</li>) :
-						projectData.bullets.map(b => <li>{`${b.chinese}`}</li>)
+						projectData.bullets.map((b, idx) => <li key={idx}>{`${b.english}`}</li>) :
+						projectData.bullets.map((b, idx) => <li key={idx}>{`${b.chinese}`}</li>)
 				}
 			</ul>			
 		</div>

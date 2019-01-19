@@ -4,19 +4,14 @@ import Link from './Link';
 
 const LinkList = ({ links }) => {
 	const colSize = 12 / links.length;
-	
-	const linkComponents = links.map(l => <div>hello world!</div>)
 
-	return
+	return (
 		<div className="col-12 center-vert">
-		{ 
-			linkComponents
+		{
+			links.map((l, idx) => (<Link colSize={colSize} key={idx} linkData={l} />))
 		}
 		</div>
-}
+)}
 
 
-// {
-// 		 	links.map(l => <Link colSize={colSize} linkData={l} />)
-// 		}
 export default LinkList;
