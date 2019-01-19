@@ -5125,13 +5125,13 @@
 /* ANIMATIONS */
 @keyframes fade {
   0% {
-    color: transparent; }
+    color: rgba(0, 0, 0, 0); }
   20% {
     color: white; }
   80% {
     color: white; }
   100% {
-    color: transparent; } }
+    color: rgba(0, 0, 0, 0); } }
 
 @keyframes pulseOnce {
   0%, 100% {
@@ -5303,7 +5303,7 @@ button {
       color: #d94040; }
     .link-container a .zmdi-download {
       color: #52e552; }
-  .link-container .img-title {
+  .link-container #img-wejay {
     width: 80%;
     display: block;
     margin: 0 auto; }
@@ -5395,7 +5395,7 @@ button {
   -o-transition: all 4s ease;
   -ms-transition: all 4s ease; }
   #title-container .header-txt {
-    background-image: linear-gradient(to right, transparent, black 25%, black 75%, transparent);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), black 25%, black 75%, rgba(0, 0, 0, 0));
     padding: 0.15em; }
   @media (max-width: 750px) {
     #title-container {

@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import WeJay from './WeJay';
-import RatMap from './RatMap';
 import Project from './Project';
-import NewsMirror from './NewsMirror';
+import RatMapData from '../props/RatMapData';
+import WeJayData from '../props/WeJayData';
+import NewsMirrorData from '../props/NewsMirrorData';
+import IntroData from '../props/IntroData';
 
 
-import BilingualText from '../props/BilingualText';
-import ProjectData from '../props/ProjectData';
-import Link from '../props/Link';
 
 /* -----------------    STATEFUL REACT COMPONENT     ------------------ */
 
@@ -41,10 +39,9 @@ class Intro extends Component {
 			/>
 		)
 	}
-
-
-
 }
+
+
 
 /* -----------------    PRESENTATIONAL COMPONENT     ------------------ */
 
@@ -53,40 +50,25 @@ class Intro extends Component {
 const DumbIntro = props => {
 	const { language, project, handleSelectProject, idx } = props;
 
-	const ratmapData = new ProjectData(
-		new BilingualText("RatMap", "鼠图"),
-		new BilingualText("Experience the real New York City", "体验地道的纽约"),
-		[
-			new BilingualText("Visualization for NYC Open Data's rat infestation inspections", "他妈太多老鼠, 卧槽看看有多少"),
-			new BilingualText("Users can filter by borough or location and calculate likelihood of infestation", "用户可以通过地区或地址计算老鼠侵扰的盖然性"),
-			new BilingualText("Built using React, Redux, Socrata Web API, and Google Maps API", "使用的工具包括React, Redux, Socrata联网API, 与谷歌地图API")
-
-		],
-		[
-			new Link(false, "https://github.com/dillonius01/ratmap", "zmdi zmdi-github zmdi-hc-2x"),
-			new Link(true, "http://ratmap.herokuapp.com", "/public/logos/icon-rat.png"),
-			new Link(false, "https://www.youtube.com/watch?v=eCVuL15I0G4", "zmdi zmdi-youtube-play zmdi-hc-2x"),
-		]);
-
 	return(
 		<div className="clearfix card-container">
 			<div className="col-12">
 				<h2 className="txt-center txt-intro name">
 					{ (language === 'English') ?
-						"Hi, my name is Dillon" :
-						"你好，我名字叫彭郎"
+						IntroData[0].english :
+						IntroData[0].chinese
 					}
 				</h2>
 				<h2 className="txt-center txt-intro">
 					{ (language === 'English') ?
-						"Among other things, I am a software engineer" :
-						"我有不同身份，其中一个是软件工程师"
+						IntroData[1].english :
+						IntroData[1].chinese
 					}
 				</h2>
 				<h2 className="txt-center txt-intro">
 				{ (language === 'English') ?
-					"Here are some cool projects I built" :
-					"看看我做过的酷毙项目"
+						IntroData[2].english :
+						IntroData[2].chinese
 				}
 				</h2>
 			</div>
@@ -98,7 +80,7 @@ const DumbIntro = props => {
 						name="wejay"
 						value={0}
 						onClick={handleSelectProject}>
-						{(language === 'English') ? "weJay" : "微贼"}
+						{(language === 'English') ? WeJayData.title.english : WeJayData.title.chinese }
 					</button>
 				</div>
 				<div className="col-4 inline-block">
@@ -106,7 +88,7 @@ const DumbIntro = props => {
 						name="ratmap"
 						value={1}
 						onClick={handleSelectProject}>
-						{(language === 'English') ? ratmapData.title.english : ratmapData.title.chinese }
+						{(language === 'English') ? RatMapData.title.english : RatMapData.title.chinese }
 					</button>
 				</div>
 				<div className="col-4 inline-block">
@@ -115,7 +97,7 @@ const DumbIntro = props => {
 						name="newsmirror"
 						value={2}
 						onClick={handleSelectProject}>
-						{(language === 'English') ? "News Mirror" : "镜子新闻"}
+						{(language === 'English') ? NewsMirrorData.title.english : NewsMirrorData.title.chinese }
 					</button>
 				</div>
 			</div>
@@ -126,27 +108,24 @@ const DumbIntro = props => {
 			<div className="col-12">
 				{
 					(project === 'wejay') ?
-					<WeJay language={language} />
+					<Project language={language} projectData={WeJayData} />
 					:
 					null
 
 				}
-
 				{
 					(project === 'ratmap') ?
-					<Project language={language} projectData={ratmapData} />
+					<Project language={language} projectData={RatMapData} />
 					:
 					null
 				}
 				{
 					(project === 'newsmirror') ?
-					<NewsMirror language={language} />
+					<Project language={language} projectData={NewsMirrorData} />
 					:
 					null
 				}
 			</div>
-
-
 		</div>
 	)
 }

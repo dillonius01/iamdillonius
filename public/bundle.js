@@ -55902,33 +55902,25 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _WeJay = __webpack_require__(368);
-	
-	var _WeJay2 = _interopRequireDefault(_WeJay);
-	
-	var _RatMap = __webpack_require__(369);
-	
-	var _RatMap2 = _interopRequireDefault(_RatMap);
-	
 	var _Project = __webpack_require__(370);
 	
 	var _Project2 = _interopRequireDefault(_Project);
 	
-	var _NewsMirror = __webpack_require__(373);
+	var _RatMapData = __webpack_require__(382);
 	
-	var _NewsMirror2 = _interopRequireDefault(_NewsMirror);
+	var _RatMapData2 = _interopRequireDefault(_RatMapData);
 	
-	var _BilingualText = __webpack_require__(374);
+	var _WeJayData = __webpack_require__(383);
 	
-	var _BilingualText2 = _interopRequireDefault(_BilingualText);
+	var _WeJayData2 = _interopRequireDefault(_WeJayData);
 	
-	var _ProjectData = __webpack_require__(375);
+	var _NewsMirrorData = __webpack_require__(385);
 	
-	var _ProjectData2 = _interopRequireDefault(_ProjectData);
+	var _NewsMirrorData2 = _interopRequireDefault(_NewsMirrorData);
 	
-	var _Link = __webpack_require__(376);
+	var _IntroData = __webpack_require__(384);
 	
-	var _Link2 = _interopRequireDefault(_Link);
+	var _IntroData2 = _interopRequireDefault(_IntroData);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -55992,8 +55984,6 @@
 		    idx = props.idx;
 	
 	
-		var ratmapData = new _ProjectData2.default(new _BilingualText2.default("RatMap", "鼠图"), new _BilingualText2.default("Experience the real New York City", "体验地道的纽约"), [new _BilingualText2.default("Visualization for NYC Open Data's rat infestation inspections", "他妈太多老鼠, 卧槽看看有多少"), new _BilingualText2.default("Users can filter by borough or location and calculate likelihood of infestation", "用户可以通过地区或地址计算老鼠侵扰的盖然性"), new _BilingualText2.default("Built using React, Redux, Socrata Web API, and Google Maps API", "使用的工具包括React, Redux, Socrata联网API, 与谷歌地图API")], [new _Link2.default(false, "https://github.com/dillonius01/ratmap", "zmdi zmdi-github zmdi-hc-2x"), new _Link2.default(true, "http://ratmap.herokuapp.com", "/public/logos/icon-rat.png"), new _Link2.default(false, "https://www.youtube.com/watch?v=eCVuL15I0G4", "zmdi zmdi-youtube-play zmdi-hc-2x")]);
-	
 		return _react2.default.createElement(
 			'div',
 			{ className: 'clearfix card-container' },
@@ -56003,17 +55993,17 @@
 				_react2.default.createElement(
 					'h2',
 					{ className: 'txt-center txt-intro name' },
-					language === 'English' ? "Hi, my name is Dillon" : "你好，我名字叫彭郎"
+					language === 'English' ? _IntroData2.default[0].english : _IntroData2.default[0].chinese
 				),
 				_react2.default.createElement(
 					'h2',
 					{ className: 'txt-center txt-intro' },
-					language === 'English' ? "Among other things, I am a software engineer" : "我有不同身份，其中一个是软件工程师"
+					language === 'English' ? _IntroData2.default[1].english : _IntroData2.default[1].chinese
 				),
 				_react2.default.createElement(
 					'h2',
 					{ className: 'txt-center txt-intro' },
-					language === 'English' ? "Here are some cool projects I built" : "看看我做过的酷毙项目"
+					language === 'English' ? _IntroData2.default[2].english : _IntroData2.default[2].chinese
 				)
 			),
 			_react2.default.createElement(
@@ -56029,7 +56019,7 @@
 							name: 'wejay',
 							value: 0,
 							onClick: handleSelectProject },
-						language === 'English' ? "weJay" : "微贼"
+						language === 'English' ? _WeJayData2.default.title.english : _WeJayData2.default.title.chinese
 					)
 				),
 				_react2.default.createElement(
@@ -56041,7 +56031,7 @@
 							name: 'ratmap',
 							value: 1,
 							onClick: handleSelectProject },
-						language === 'English' ? ratmapData.title.english : ratmapData.title.chinese
+						language === 'English' ? _RatMapData2.default.title.english : _RatMapData2.default.title.chinese
 					)
 				),
 				_react2.default.createElement(
@@ -56054,7 +56044,7 @@
 							name: 'newsmirror',
 							value: 2,
 							onClick: handleSelectProject },
-						language === 'English' ? "News Mirror" : "镜子新闻"
+						language === 'English' ? _NewsMirrorData2.default.title.english : _NewsMirrorData2.default.title.chinese
 					)
 				)
 			),
@@ -56066,9 +56056,9 @@
 			_react2.default.createElement(
 				'div',
 				{ className: 'col-12' },
-				project === 'wejay' ? _react2.default.createElement(_WeJay2.default, { language: language }) : null,
-				project === 'ratmap' ? _react2.default.createElement(_Project2.default, { language: language, projectData: ratmapData }) : null,
-				project === 'newsmirror' ? _react2.default.createElement(_NewsMirror2.default, { language: language }) : null
+				project === 'wejay' ? _react2.default.createElement(_Project2.default, { language: language, projectData: _WeJayData2.default }) : null,
+				project === 'ratmap' ? _react2.default.createElement(_Project2.default, { language: language, projectData: _RatMapData2.default }) : null,
+				project === 'newsmirror' ? _react2.default.createElement(_Project2.default, { language: language, projectData: _NewsMirrorData2.default }) : null
 			)
 		);
 	};
@@ -56076,234 +56066,8 @@
 	exports.default = Intro;
 
 /***/ }),
-/* 368 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	/* -----------------    PRESENTATIONAL COMPONENT     ------------------ */
-	
-	var WeJay = function WeJay(_ref) {
-		var language = _ref.language;
-		return _react2.default.createElement(
-			"div",
-			{ className: "card-container clearfix" },
-			_react2.default.createElement(
-				"div",
-				{ className: "col-12 card-title" },
-				_react2.default.createElement(
-					"h3",
-					{ className: "subtitle" },
-					language === 'English' ? "weJay" : "微贼"
-				),
-				_react2.default.createElement(
-					"h5",
-					{ className: "subtitle" },
-					language === 'English' ? "Everyone's a DJ" : "连你也可以当DJ"
-				)
-			),
-			_react2.default.createElement(
-				"div",
-				{ className: "col-12" },
-				language === 'English' ? _react2.default.createElement(
-					"ul",
-					{ className: "project-bullets" },
-					_react2.default.createElement(
-						"li",
-						null,
-						"Collaborative DJ web app that lets party-goers democratically choose what songs plays next"
-					),
-					_react2.default.createElement(
-						"li",
-						null,
-						"Users suggest songs from Soundcloud, upvote songs they like, and earn DJ points for popular choices"
-					),
-					_react2.default.createElement(
-						"li",
-						null,
-						"Built using React, Redux, and Firebase"
-					)
-				) : _react2.default.createElement(
-					"ul",
-					{ className: "project-bullets" },
-					_react2.default.createElement(
-						"li",
-						null,
-						"\u4E0E\u670B\u53CB\u4EEC\u643A\u624B\u521B\u9020\u64AD\u653E\u5217\u8868"
-					),
-					_react2.default.createElement(
-						"li",
-						null,
-						"\u7528\u6237\u901A\u8FC7Soundcloud\u5BFB\u627E\u5E76\u70B9\u8D5E\u559C\u6B22\u7684\u6B4C\u66F2\uFF0C\u56E0\u6B64\u53EF\u4EE5\u79EF\u7D2FDJ\u5206"
-					),
-					_react2.default.createElement(
-						"li",
-						null,
-						"\u4F7F\u7528\u7684\u5DE5\u5177\u5305\u62ECReact, Redux, \u4E0E\u8C37\u6B4CFirebase"
-					)
-				)
-			),
-			_react2.default.createElement(
-				"div",
-				{ className: "col-12 center-vert" },
-				_react2.default.createElement(
-					"div",
-					{ className: "col-4 link-container" },
-					_react2.default.createElement(
-						"a",
-						{ target: "_blank", href: "https://github.com/christophermanahan/wejay" },
-						_react2.default.createElement("i", { className: "zmdi zmdi-github zmdi-hc-2x" })
-					)
-				),
-				_react2.default.createElement(
-					"div",
-					{ className: "col-4 link-container" },
-					_react2.default.createElement(
-						"a",
-						{ target: "_blank", href: "http://wejay.me" },
-						_react2.default.createElement("img", { className: "img-title", src: "public/logos/wejay.png" })
-					)
-				),
-				_react2.default.createElement(
-					"div",
-					{ className: "col-4 link-container" },
-					_react2.default.createElement(
-						"a",
-						{ target: "_blank", href: "https://www.youtube.com/watch?v=-XEOkNGz8m0" },
-						_react2.default.createElement("i", { className: "zmdi zmdi-youtube-play zmdi-hc-2x" })
-					)
-				)
-			)
-		);
-	};
-	
-	exports.default = WeJay;
-
-/***/ }),
-/* 369 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	/* -----------------    PRESENTATIONAL COMPONENT     ------------------ */
-	
-	var RatMap = function RatMap(_ref) {
-		var language = _ref.language;
-		return _react2.default.createElement(
-			"div",
-			{ className: "card-container clearfix" },
-			_react2.default.createElement(
-				"div",
-				{ className: "col-12 card-title" },
-				_react2.default.createElement(
-					"h3",
-					{ className: "subtitle" },
-					language === 'English' ? "RatMap" : "鼠图"
-				),
-				_react2.default.createElement(
-					"h5",
-					{ className: "subtitle" },
-					language === 'English' ? "Experience the real New York City" : "体验地道的纽约"
-				)
-			),
-			_react2.default.createElement(
-				"div",
-				{ className: "col-12" },
-				language === 'English' ? _react2.default.createElement(
-					"ul",
-					{ className: "project-bullets" },
-					_react2.default.createElement(
-						"li",
-						null,
-						"Visualization for NYC Open Data's rat infestation inspections"
-					),
-					_react2.default.createElement(
-						"li",
-						null,
-						"Users can filter by borough or location and calculate likelihood of infestation"
-					),
-					_react2.default.createElement(
-						"li",
-						null,
-						"Built using React, Redux, Socrata Web API, and Google Maps API"
-					)
-				) : _react2.default.createElement(
-					"ul",
-					{ className: "project-bullets" },
-					_react2.default.createElement(
-						"li",
-						null,
-						"\u4ED6\u5988\u592A\u591A\u8001\u9F20, \u5367\u69FD\u770B\u770B\u6709\u591A\u5C11"
-					),
-					_react2.default.createElement(
-						"li",
-						null,
-						"\u7528\u6237\u53EF\u4EE5\u901A\u8FC7\u5730\u533A\u6216\u5730\u5740\u8BA1\u7B97\u8001\u9F20\u4FB5\u6270\u7684\u76D6\u7136\u6027"
-					),
-					_react2.default.createElement(
-						"li",
-						null,
-						"\u4F7F\u7528\u7684\u5DE5\u5177\u5305\u62ECReact, Redux, Socrata\u8054\u7F51API, \u4E0E\u8C37\u6B4C\u5730\u56FEAPI"
-					)
-				)
-			),
-			_react2.default.createElement(
-				"div",
-				{ className: "col-12 center-vert" },
-				_react2.default.createElement(
-					"div",
-					{ className: "col-4 link-container" },
-					_react2.default.createElement(
-						"a",
-						{ target: "_blank", href: "https://github.com/dillonius01/ratmap" },
-						_react2.default.createElement("i", { className: "zmdi zmdi-github zmdi-hc-2x" })
-					)
-				),
-				_react2.default.createElement(
-					"div",
-					{ className: "col-4 link-container" },
-					_react2.default.createElement(
-						"a",
-						{ target: "_blank", href: "http://ratmap.herokuapp.com" },
-						_react2.default.createElement("img", { id: "img-ratmap", src: "/public/logos/icon-rat.png" })
-					)
-				),
-				_react2.default.createElement(
-					"div",
-					{ className: "col-4 link-container" },
-					_react2.default.createElement(
-						"a",
-						{ target: "_blank", href: "https://www.youtube.com/watch?v=eCVuL15I0G4" },
-						_react2.default.createElement("i", { className: "zmdi zmdi-youtube-play zmdi-hc-2x" })
-					)
-				)
-			)
-		);
-	};
-	
-	exports.default = RatMap;
-
-/***/ }),
+/* 368 */,
+/* 369 */,
 /* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -56433,7 +56197,7 @@
 			linkData.isImage ? _react2.default.createElement(
 				"a",
 				{ target: "_blank", href: linkData.target },
-				_react2.default.createElement("img", { id: "img-ratmap", src: linkData.source })
+				_react2.default.createElement("img", { id: linkData.id, src: linkData.source })
 			) : _react2.default.createElement(
 				"a",
 				{ target: "_blank", href: linkData.target },
@@ -56445,102 +56209,7 @@
 	exports.default = Link;
 
 /***/ }),
-/* 373 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	/* -----------------    PRESENTATIONAL COMPONENT     ------------------ */
-	
-	var NewsMirror = function NewsMirror(_ref) {
-		var language = _ref.language;
-		return _react2.default.createElement(
-			"div",
-			{ className: "card-container clearfix" },
-			_react2.default.createElement(
-				"div",
-				{ className: "col-12 card-title" },
-				_react2.default.createElement(
-					"h3",
-					{ className: "subtitle" },
-					language === 'English' ? "News Mirror" : "镜子新闻"
-				),
-				_react2.default.createElement(
-					"h5",
-					{ className: "subtitle" },
-					language === 'English' ? "Updates from the other side" : "双面之信息"
-				)
-			),
-			_react2.default.createElement(
-				"div",
-				{ className: "col-12" },
-				language === 'English' ? _react2.default.createElement(
-					"ul",
-					{ className: "project-bullets" },
-					_react2.default.createElement(
-						"li",
-						null,
-						"Chrome extension that generates suggestions for related news articles from different political opinions"
-					),
-					_react2.default.createElement(
-						"li",
-						null,
-						"Generates suggestions based on the current page content and analysis of the site's political leanings"
-					),
-					_react2.default.createElement(
-						"li",
-						null,
-						"Built using nothing but sweet, sweet JavaScript"
-					)
-				) : _react2.default.createElement(
-					"ul",
-					{ className: "project-bullets" },
-					_react2.default.createElement(
-						"li",
-						null,
-						"\u5BFB\u627E\u6709\u4E0D\u540C\u653F\u6CBB\u89C2\u5FF5\u7684\u65B0\u95FB"
-					),
-					_react2.default.createElement(
-						"li",
-						null,
-						"\u5206\u6790\u7F51\u5740\u4E4B\u540E\uFF0C\u5E94\u7528\u901A\u8FC7\u667A\u80FD\u79D1\u6280\u63A8\u8350\u7C7B\u4F3C\u7684\u65B0\u95FB"
-					),
-					_react2.default.createElement(
-						"li",
-						null,
-						"\u7B80\u5355\u5C31\u662F\u9B45\u529B\uFF1A\u6B64\u9879\u76EE\u53EA\u7528\u4E86\u4E00\u70B9\u7EAF\u51C0\u7684JavaScript\u6211\u5C31\u5F00\u5FC3\u4E86"
-					)
-				)
-			),
-			_react2.default.createElement(
-				"div",
-				{ className: "col-12 center-vert" },
-				_react2.default.createElement(
-					"div",
-					{ className: "col-12 link-container" },
-					_react2.default.createElement(
-						"a",
-						{ target: "_blank", href: "https://github.com/harryttd/news-mirror" },
-						_react2.default.createElement("i", { className: "zmdi zmdi-github zmdi-hc-2x" })
-					)
-				)
-			)
-		);
-	};
-	
-	exports.default = NewsMirror;
-
-/***/ }),
+/* 373 */,
 /* 374 */
 /***/ (function(module, exports) {
 
@@ -56596,12 +56265,13 @@
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	var Link = function Link(isImage, target, source) {
+	var Link = function Link(isImage, target, source, id) {
 		_classCallCheck(this, Link);
 	
 		this.isImage = isImage;
 		this.target = target;
 		this.source = source;
+		this.id = id;
 	};
 	
 	exports.default = Link;
@@ -57150,13 +56820,19 @@
 	
 	var Disclaimer = function Disclaimer(_ref) {
 		var language = _ref.language;
+	
+		var currentTime = new Date();
+		var currentYear = currentTime.getFullYear();
+	
 		return _react2.default.createElement(
 			"div",
 			{ className: "col-12 mx-auto" },
 			_react2.default.createElement(
 				"h3",
 				{ className: "center m0" },
-				"\xA9 2019 iamdillonius"
+				"\xA9 ",
+				"" + currentYear,
+				" iamdillonius"
 			),
 			language === 'English' ? _react2.default.createElement(
 				"h3",
@@ -57180,6 +56856,110 @@
 	};
 	
 	exports.default = Disclaimer;
+
+/***/ }),
+/* 382 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _BilingualText = __webpack_require__(374);
+	
+	var _BilingualText2 = _interopRequireDefault(_BilingualText);
+	
+	var _ProjectData = __webpack_require__(375);
+	
+	var _ProjectData2 = _interopRequireDefault(_ProjectData);
+	
+	var _Link = __webpack_require__(376);
+	
+	var _Link2 = _interopRequireDefault(_Link);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var RatMapData = new _ProjectData2.default(new _BilingualText2.default("RatMap", "鼠图"), new _BilingualText2.default("Experience the real New York City", "体验地道的纽约"), [new _BilingualText2.default("Visualization for NYC Open Data's rat infestation inspections", "他妈太多老鼠, 卧槽看看有多少"), new _BilingualText2.default("Users can filter by borough or location and calculate likelihood of infestation", "用户可以通过地区或地址计算老鼠侵扰的盖然性"), new _BilingualText2.default("Built using React, Redux, Socrata Web API, and Google Maps API", "使用的工具包括React, Redux, Socrata联网API, 与谷歌地图API")], [new _Link2.default(false, "https://github.com/dillonius01/ratmap", "zmdi zmdi-github zmdi-hc-2x"), new _Link2.default(true, "http://ratmap.herokuapp.com", "/public/logos/icon-rat.png", "img-ratmap"), new _Link2.default(false, "https://www.youtube.com/watch?v=eCVuL15I0G4", "zmdi zmdi-youtube-play zmdi-hc-2x")]);
+	
+	exports.default = RatMapData;
+
+/***/ }),
+/* 383 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _BilingualText = __webpack_require__(374);
+	
+	var _BilingualText2 = _interopRequireDefault(_BilingualText);
+	
+	var _ProjectData = __webpack_require__(375);
+	
+	var _ProjectData2 = _interopRequireDefault(_ProjectData);
+	
+	var _Link = __webpack_require__(376);
+	
+	var _Link2 = _interopRequireDefault(_Link);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var WeJayData = new _ProjectData2.default(new _BilingualText2.default("weJay", "微贼"), new _BilingualText2.default("Everyone's a DJ", "连你也可以当DJ"), [new _BilingualText2.default("Collaborative DJ web app that lets party-goers democratically choose what songs plays next", "与朋友们携手创造播放列表"), new _BilingualText2.default("Users suggest songs from Soundcloud, upvote songs they like, and earn DJ points for popular choices", "用户通过Soundcloud寻找并点赞喜欢的歌曲，因此可以积累DJ分"), new _BilingualText2.default("Built using React, Redux, and Firebase", "使用的工具包括React, Redux, 与谷歌Firebase")], [new _Link2.default(false, "https://github.com/christophermanahan/wejay", "zmdi zmdi-github zmdi-hc-2x"), new _Link2.default(true, "http://wejay.me", "public/logos/wejay.png", "img-wejay"), new _Link2.default(false, "https://www.youtube.com/watch?v=-XEOkNGz8m0", "zmdi zmdi-youtube-play zmdi-hc-2x")]);
+	
+	exports.default = WeJayData;
+
+/***/ }),
+/* 384 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _BilingualText = __webpack_require__(374);
+	
+	var _BilingualText2 = _interopRequireDefault(_BilingualText);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var IntroData = [new _BilingualText2.default("Hi, my name is Dillon", "你好，我名字叫彭郎"), new _BilingualText2.default("Among other things, I am a software engineer", "我有不同身份，其中一个是软件工程师"), new _BilingualText2.default("Here are some cool projects I built", "看看我做过的酷毙项目")];
+	
+	exports.default = IntroData;
+
+/***/ }),
+/* 385 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _BilingualText = __webpack_require__(374);
+	
+	var _BilingualText2 = _interopRequireDefault(_BilingualText);
+	
+	var _ProjectData = __webpack_require__(375);
+	
+	var _ProjectData2 = _interopRequireDefault(_ProjectData);
+	
+	var _Link = __webpack_require__(376);
+	
+	var _Link2 = _interopRequireDefault(_Link);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var NewsMirrorData = new _ProjectData2.default(new _BilingualText2.default("News Mirror", "镜子新闻"), new _BilingualText2.default("Updates from the other side", "双面之信息"), [new _BilingualText2.default("Chrome extension that generates suggestions for related news articles from different political opinions", "寻找有不同政治观念的新闻"), new _BilingualText2.default("Generates suggestions based on the current page content and analysis of the site's political leanings", "分析网址之后，应用通过智能科技推荐类似的新闻"), new _BilingualText2.default("Built using nothing but sweet, sweet JavaScript", "简单就是魅力：此项目只用了一点纯净的JavaScript我就开心了")], [new _Link2.default(false, "https://github.com/harryttd/news-mirror", "zmdi zmdi-github zmdi-hc-2x")]);
+	
+	exports.default = NewsMirrorData;
 
 /***/ })
 /******/ ]);

@@ -5,7 +5,7 @@ const Link = ({ colSize, linkData }) => (
 	{
 		linkData.isImage ?
 		<a target="_blank" href={linkData.target}>
-			<img id="img-ratmap" src={linkData.source}></img>
+			<img id={linkData.id} src={linkData.source}></img>
 		</a>
 		:
 		<a target="_blank" href={linkData.target}>
