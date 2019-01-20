@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack && npm run build-css-once && node server.js",
-    "start-dev": "webpack-dev-server --open",
+    "start-dev": "webpack -w",
     "build-css": "node-sass -w assets/stylesheets/main.scss -o public/stylesheets",
     "build-css-once": "node-sass assets/stylesheets/main.scss -o public/stylesheets"
   },
@@ -22,8 +22,8 @@
     "express": "^4.14.0",
     "node-sass": "^4.11.0",
     "nodemon": "^1.11.0",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
     "react-redux": "^4.4.5",
     "react-router": "^3.0.0",
     "react-spark-scroll-gsap": "^2.0.2",
