@@ -14,7 +14,6 @@ const RatMapData =
 		],
 		[
 			new Link(false, "https://github.com/dillonius01/ratmap", "zmdi zmdi-github zmdi-hc-2x"),
-			new Link(true, "http://ratmap.herokuapp.com", "/public/logos/icon-rat.png", "img-ratmap"),
 			new Link(false, "https://www.youtube.com/watch?v=eCVuL15I0G4", "zmdi zmdi-youtube-play zmdi-hc-2x"),
 		]);
 
