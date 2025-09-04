@@ -13,3 +13,12 @@ I'm using Webpack to bundle my JavaScript and Node-Sass to compile my styles. Th
 
 ## Future Direction
 Down the road, I may want to expand the scope and build out my own blogging platform. That, and maybe integrate some maps. Everyone loves maps.
+
+## Development
+```bash
+npm install
+npm start
+# serves on http://localhost:3000
+```
+
+There is no remote build enabled, so commit changes to generated js files in `public`. This is served via an integration with github-pages.
