@@ -124,11 +124,11 @@ const DumbTechnologies = props => {
 			<div className="col-12">
 
 				<div className="col-6 md-col md-col-3 inline-block tech-img-container">
-					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="0" ref={ setIcon } className={`tech-img ${animate0 ? generateRandomAnimation() : ''}`} src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png" alt=""/>
+					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="0" ref={ setIcon } className={`tech-img ${animate0 ? generateRandomAnimation() : ''}`} src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt=""/>
 				</div>
 
 				<div className="col-6 md-col md-col-3 inline-block tech-img-container">
-					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="1" ref={ setIcon } className={`tech-img ${animate1 ? generateRandomAnimation() : ''}`} src="http://daynin.github.io/clojurescript-presentation/img/react-logo.png" alt=""/>
+					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="1" ref={ setIcon } className={`tech-img ${animate1 ? generateRandomAnimation() : ''}`} src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt=""/>
 				</div>
 
 				<div className="col-6 md-col md-col-3 inline-block tech-img-container">
@@ -136,7 +136,7 @@ const DumbTechnologies = props => {
 				</div>
 
 				<div className="col-6 md-col md-col-3 inline-block tech-img-container">
-					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="3" ref={ setIcon } className={`tech-img ${animate3 ? generateRandomAnimation() : ''}`} src="https://lh3.googleusercontent.com/-whXBCDVxIto/Vz2Rsyz-UjI/AAAAAAAAiJc/UjvR-M2b9tY5SyKFkDY6Q_MbusEINRXkQ/w1024-h1024/Firebase_16-logo.png" alt=""/>
+					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="3" ref={ setIcon } className={`tech-img ${animate3 ? generateRandomAnimation() : ''}`} src="https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg" alt=""/>
 				</div>
 
 				<div className="col-6 md-col md-col-3 inline-block tech-img-container">
@@ -152,7 +152,7 @@ const DumbTechnologies = props => {
 				</div>
 
 				<div className="col-6 md-col md-col-3 inline-block tech-img-container">
-					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="7" ref={ setIcon } className={`tech-img ${animate7 ? generateRandomAnimation() : ''}`} src="https://onsen.io/blog/content/images/2015/Aug/chaijs-mocha.png" alt=""/>
+					<img onClick={handleMouseEvt} onMouseOver={handleMouseEvt} name="7" ref={ setIcon } className={`tech-img ${animate7 ? generateRandomAnimation() : ''}`} src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt=""/>
 				</div>
 			</div>
 		</div>
